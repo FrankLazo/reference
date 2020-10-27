@@ -1,0 +1,1699 @@
+<!--------------------------------------------------------------------------------------------------
+                                  HTML: HyperText Markup Language
+                                  ===============================
+
+> HTML Elements:    <tag name="value"> Contenido </tag>
+
+    - Etiquetas (Tags):     Contenedores que dicen algo sobre la información que llevan.
+    - Contenido (Content):  La información dentro de las etiquetas.
+
+    - Etiqueta de apertura (Opening tag):                           <tag>
+    - Etiqueta de cierre (Closing tag):                             </tag>
+    - Corchete angular izquierdo, Signo menor que, Cuña izquierda
+        (Left-angle bracket, Less-than sign):                       <
+    - Corchete angular derecho, Signo mayor que, Cuña derecha
+        (Right-angle bracket, More-than sign):                      >
+    - Caracter(es): Indica la finalidad de la etiqueta:             tag
+    - Barra (Forward slash):                                        /
+
+    - Nombre del atributo (Attribute name): Tipo de información adicional.
+    - Valor del atributo (Attribute value): Información adicional sobre el contenido.
+    - Signo de igualdad (Equals sign):      =
+    - Comillas dobles (Double quotes):      " " ó
+    - Comillas simples (Single quotes):     ' '
+
+> Nombres de símbolos:
+    - Paréntesis:
+        - Redondos:     ( )
+        - Corchetes:    [ ]
+        - Llaves:       { }
+        - Angulares:    < >
+    
+    - Comillas:
+        - Angulares o bajas o latinas o españolas:  << >>
+        - Altas o inglesas:                         " "
+        - Simples:                                  ' '
+
+    - Barras:
+        - Barra:            /
+        - Barra inversa:    \
+
+> Nesting Elements:     <tag1>...<tag2>...</tag2>...</tag1> (Elementos anidados)
+
+> Empty Elements (Void elements):
+    No tienen contenido. No encierran a otro elemento, sólo se incrustan:
+
+    - HTML:             <tag>
+    - XHTML:            <tag/> ó <tag></tag>
+    - XHTML -> HTML:    <tag />
+
+> Boolean attributes:   < ... boolean-name> ó < ... boolean-name = "boolean-name">
+    Sin valores, sólo pueden tener un valor que generalmente es igual al nombre.
+> La mayoría de atributos sólo pueden ser usados en algunos elementos, otros pueden aparecer en
+    cualquier elemento: Atributos globales.
+> Global attributes:    Para CSS, JS.
+    - id="..."          Inicia con minúscula o guión bajo.
+                        No pueden haber dos #id iguales en la misma página.
+    - class="..."       Para varios elementos. Separados por espacio.
+> La mayoría de valores están predeterminados o siguen cierto formato.
+> HTML 5 permite los nombres de atributos en mayúsculas y valores sin comillas.
+    (Para valores que no contengan: ASCII whitespace, ", ', `, =, <, >)
+> Se pueden incluir comillas del otro tipo en los valores: "...isn't..."
+
+> HTML Entities, escape characters: 
+    - Special characters:   <, >, ", ', &
+    - Character references: Códigos especiales que representan caracteres.
+    - &nbsp;            Espacio en blanco
+    - &lt;      &#60;   < (Less-than sign)
+    - &gt;              > (Greater-than sign)
+    - &amp;     &#38;   & (Ampersand)
+    - &quot;    &#34;   " (Quotation mark)
+    - &apos;    &#39;   ' (Apostrophe)
+    - &lsquo;   &#8216; ‘ (Left single quote)
+    - &rsquo;   &#8217; ’ (Right single quote)
+    - &ldquo;   &#8220; “ (Left double quotes)
+    - &rdquo;   &#8221; ” (Right double quotes)
+    - &times;   &#215;  x (Multiplication sign)
+    - &divide;  &#247;  ÷ (Division sign)
+    - &cent;    &#162;  ¢ (Cent sign)
+    - &pound;   &#163;  £ (Pound sign)
+    - &yen;     &#165;  ¥ (Yen sign)
+    - &euro;    &#8364; € (Euro sign)
+    - &copy;    &#169;  © (Copyright symbol)
+    - &reg;     &#174;  ® (Registered trademark)
+    - &trade;   &#8482; ™ (Trademark)
+
+> White Space: Los espacios del código son tratados como sólo un espacio en blanco.
+> White Space: Para hacer el código más legible.
+
+> Structural Markup: Estructura la página.
+> Semantic Markup: No estructura, sino describe con más exactitud el contenido,
+    para que otros programas como Screen readers o Search engines usen esa información extra.
+
+> Block-level elements: Bloque visible en página. Aparece en una nueva línea.
+    Tiende a ser elemento estructural. No puede estar dentro de un inline element,
+    pero si dentro de otro block-level element.
+> Inline elements: Dentro de block-level element y encierra pequeñas partes del documento.
+    No aparecen en nueva línea, generalmente dentro de un párrafo. Continúan la misma línea.
+> No confundir con las cajas CSS.
+
+> HTML Comments: Ignorado por el navegador e invisibles para el usuario.
+    Indica como funciona el código, las diferentes partes del código, etc.
+    <-- start of main text -- >
+    <-- end of main text -- >
+> Conditional comments: Sólo para el navegador Internet Explorer. Los otros lo ignoran.
+        < !--[if lt IE 9]>
+            code...
+        <![endif]-- >
+    - Operadores:   !       Negación
+                    lt      Menor que
+                    lte     Menor o igual que
+                    gt      Mayor que
+                    gte     Mayor o igual que
+
+> Debbugging HTML: validator.w3.org (Markup validation service).
+> Cuando el código no funciona totalmente, parcialmente o no como uno quería.
+> Cómodo con escribir y depurar: Familiarizarse con el lenguaje y las herramientas.
+> HTML es interpretado, no compilado.
+> Existen errores de sintaxis y errores lógicos.
+> Navegadores corren e intentan corregir los errores de sintaxis.
+
+> Lenguaje XML: XHTML - SVG (Scalable Vector Graphics), MathML, CML (Chemical).
+--------------------------------------------------------------------------------------------------->
+
+<!-- XML Declaration -->
+<!-- Si es usado, nade debe ir antes de, ni siquiera espacios -->
+<?xml version="1.0" ?>
+
+<!-- Le dice al navegador que tipo de documento es:
+    HTML4, Transitional XHTML 1.0 o Strict XHTML 1.0 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/ xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/ xhtml1-strict.dtd">
+<!-- Asegura que el documento actúe correctamente -->
+<!-- HTML5: -->
+<!DOCTYPE html>
+
+<!-- Root element: Contiene el código HTML -->
+<!-- lang = "en-US": Lenguaje primario del documento -->
+<!-- Mejor indexación en los buscadores al especificar el idioma -->
+<!-- Útil para la correcta pronunciación de Screen readers -->
+<!-- Se puede añadir a diferentes secciones del documento con idioma diferente -->
+<!-- ISO639-1: Languages tags in HTML y XML -->
+<html lang="en">
+
+<!-- Información sobre la página que no es mostrada en la ventana principal del navegador -->
+<!-- Contiene metadata (data que describe otra data) del documento HTML -->
+<!-- Información para los buscadores, quién la ha creado o si puede expirar -->
+<head>
+    <!-- Set de caracteres que se usará -->
+    <!-- ISO-8859-1: Para alfabeto latino -->
+    <!-- UTF-8 o utf-8: Permite visualizar cualquier caracter de cualquier idioma -->
+    <meta charset="UTF-8">
+
+    <!-- name = " ": Qué tipo de elemento meta es, qué tipo de información contiene -->
+    <!-- content = " ": El contenido de meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El autor de la página. Para cualquier contacto o pregunta -->
+    <meta name="author" content="Frank Lazo">
+    <!-- Keywords del contenido -->
+    <!-- Se muestra en los resultados de búsquedas (SEO). Máximo 155 caracteres -->
+    <meta name="description" content="Este documento ha sido desarrollado con el fin de proporcionar
+        una referencia rápida del uso de los elementos HTML y de sus buenas prácticas">
+    <!-- Palabras clave. Ya no se usa a causa de los spammers. Los buscadores lo ignoran -->
+    <meta name="keywords" content="HTML, referencia, lista, elementos, recomendaciones">
+    <!-- Para ser incluido en el buscador -->
+    <!-- noindex: no incluido en los resultados -->
+    <!-- nofollow: la página sí, pero no las páginas con enlace a ella -->
+    <meta name="robots" content="noindex/nofollow">
+
+    <!-- Autor de la página -->
+    <meta http-equiv="author" content="Frank Lazo" />
+    <!-- Si la página se almacena en la caché -->
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- La fecha en la que expirará de la caché. En el formato mostrado -->
+    <meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT" />
+
+    <!-- Metadata por terceros: -->
+    <!-- Open Graph Data: Información mostrada al compartir el enlace en Facebook -->
+    <meta property="og:image" content="images/my-image.jpg">
+    <meta property="og:description" content="Documento desarrollado como una rápida referencia">
+    <meta property="og:title" content="Document's Title">
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Document's Title">
+
+    <!-- Favicon (Favorite icon): Visible en pestañas y marcadores. 16-pixel square -->
+    <!-- Guardar en el mismo directorio del index.html en formato .ico (Compatibilidad
+        con navegadores anteriores) La mayoría acepta: .gif y .png -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Third-generation iPad with high-resolution Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+    <!-- IPhone with high-resolution Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+    <!-- First- and second-generation iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+    <!-- Non-Retina iPhone, iPod Touch, and Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="favicon57.png">
+    <!-- Basic favicon -->
+    <link rel="shortcut icon" href="favicon32.ico">
+
+    <!-- Título de todo el documento HTML, no del contenido del documento -->
+    <!-- Título en el resultado de los buscadores -->
+    <!-- Descripción que se muestra en la barra de título o en las pestañas (tabs) -->
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Script: Usualmente antes de cerrar el body -->
+    <!-- Si intenta leer un elemento que no existe aún, puede producir error -->
+    <script src="js/main.js"></script>
+    <script>
+        /* Código script */
+    </script>
+</head>
+
+<!-- Lo que será mostrado dentro de la ventana principal del navegador -->
+<body>
+    <!--------------------------------------------------------------------------------------->
+    <!-- TEXT                                                                              -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Structural Markups ----------------------------------------------------------------->
+
+    <!-- Encabezados (Headings) -->
+    <h1 id="main-heading">Main Heading</h1> <!-- Encabezado principal - Título -->
+    <h2>Level 2 heading</h2>    <!-- Sub-encabezados (Sub-headings) - Subtítulos -->
+    <h3>Level 3 heading</h3>    <!-- (Sub-subheadings) -->
+    <h4>Level 4 heading</h4>
+    <h5>Level 5 heading</h5>
+    <h6>Level 6 heading</h6>
+
+    <!-- Párrafos (Paragraphs) -->
+    <p>Paragraph</p> <!-- Por defecto, separados por una línea en blanco -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis. Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+    <hr />
+
+    <!-- Semantic markup -------------------------------------------------------------------->
+
+    <!-- Emphasis and Importance -->
+    <!-- Se pueden anidar entre sí -->
+    <!-- Screen readers lo leen en un tono diferente -->
+    <p>
+        <!-- Énfasis que sutilmente cambia el significado de una oración -->
+        <em>Emphasis</em>
+        <!-- Contenido de gran importancia o diferente, dichos con fuerte énfasis -->
+        <strong>Strong</strong>
+    </p>
+    
+    <!-- Presentational elements -->
+    <!-- No son semánticos, no deben ser usados, sólo para significados tradicionales. -->
+    <p>
+        <!-- Estilo Negrita (Bold) -->
+        <b>Bold</b> <!-- Para una visualización diferente: Keywords, Nombres de productos,
+                        Oraciones principales -->
+        <!-- Estilo Cursiva (Italic) -->
+        <!-- Puede ser confuso para personas de alfabeto no-latino -->
+        <i>Italic</i> <!-- Textos dicho de manera diferente: Términos técnicos,
+                        Nombres de navíos, Palabras extranjeras, Pensamientos,
+                        Designación taxonómica -->
+        <!-- Estilo Subrayado (Underline) -->
+        <u>Underline</u> <!-- Ya no se usa. Nombres propios, Faltas de ortografía -->
+    </p>
+
+    <!-- Quotations -->
+    <!-- cite = " ": URL que indica de donde es la cita -->
+    <!-- Navegadores y Screen readers no muestran el contenido de cite,
+        solución con JS, CSS o un link -->
+    <blockquote cite="#">Blockquote</blockquote> <!-- Citas largas que ocupan un párrafo.
+        Incluir <p> dentro de <blockquote>. Puede ser un párrafo, varios párrafos,
+        una lista, etc -->
+    <p>
+        <q cite="#">Inline Quotation</q> <!-- Citas pequeñas dentro de un párrafo -->
+        <cite>Citation</cite> <!-- Para referenciar un libro, película, informe de
+            investigación del que se está hablando. Referencia a blockquote o <q> cercano.
+            Título del recurso. Incluirlo dentro de un link -->
+    </p>
+
+    <!-- Abbreviations and Acronyms -->
+    <p>
+        <!-- Usar el término completo antes de su abreviatura -->
+        <abbr title="Abbreviation">Abbreviation</abbr> <!-- Para abreviaciones
+            o acrónimos -->
+        <acronym title="Acronym">Acronym</acronym> <!-- Para acrónimos -->
+    </p>
+
+    <!-- Definitions -->
+    <p>
+        <dfn>Definition</dfn> <!-- Para la primera vez que se explica
+            una nueva terminología -->
+    </p>
+
+    <!-- Author details -->
+    <!-- Contact details for the author of the page - hCard -->
+    <!-- Contiene los detalles de contacto del autor de la página: dirección,
+        número telefónico, correo, etc. Pueden haber todos los marcadores necesarios.
+        Incluir <p> dentro de <address> -->
+    <address>
+        <p>Author details</p>
+    </address>
+    <!-- Puede ser sólo un enlace a los detalles del contacto -->
+    <address>
+        <p><a href="#">Contact details</a></p>
+    </address>
+
+    <!-- Superscripts and Subscripts -->
+    <p>
+        <!-- Superíndices (Superscript) -->
+        <sup>Superscript</sup> <!-- Sufijos de fechas, matemáticas -->
+        <!-- Subíndices (Subscript) -->
+        <sub>Subscript</sub> <!-- Notas de pie de página, fórmulas químicas -->
+    </p>
+
+    <!-- Changes to content -->
+    <p>
+        <ins>Inserted</ins> <!-- Contenido insertado en vez del eliminado -->
+        <del>Deleted</del> <!-- Contenido eliminado -->
+        <s>Strikethrough</s> <!-- Strikethrough.
+            Para algo que ya no es relevante pero no debe ser eliminado -->
+    </p>
+
+    <!-- Computer code -->
+    <p>
+        <code>&lt;code&gt;</code> <!-- Partes genéricas de un código computacional -->
+    </p>
+    <pre>
+    <code>var pre = document.querySelector('pre');
+
+    pre.onclick = function() {
+        alert('Owww, stop poking me!');
+    }</code></pre> <!-- Generalmente para bloques de código, conserva los espacios -->
+    <p>
+        <var>Variable</var> <!-- Para variables de un código -->
+        <kbd>Enter</kbd> <!-- Keyboard u otros tipos de input ingresada a la computadora -->
+        
+    </p>
+    <pre>
+    <samp>Output
+    Output - Output</samp></pre> <!-- La salida de un programa de computadora -->
+
+    <!-- Times and Dates -->
+    <!-- Para que sea reconocible por la máquina -->
+    <p>
+        <time datetime="2016-01-20">20 de enero del 2016</time><br />
+        <time datetime="2016-01">Enero del 2016</time><br />
+        <time datetime="01-20">20 de enero</time><br />
+        <time datetime="19:30">7:30pm</time><br />
+        <time datetime="19:30:01.856">7:30 pm + 1s + 856ms</time><br /> <!-- milisegundos-->
+        <time datetime="2016-01-20T19:30">20 de enero del 2016 a las 7:30pm</time><br />
+        <time datetime="2016-01-20T19:30+01:00">
+            20 de enero del 2016 a las 7:30pm (+01:00)
+        </time><br /> <!-- Timezone offset-->
+        <time datetime="2016-W04">Semana 4 del 2016</time>
+    </p>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- LISTS                                                                             -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Unordered lists -->
+    <ul>
+        <!-- List item -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <!-- Ordered lists -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <!-- Listas anidadas (Nested lists) -->
+    <ol>
+        <li>Group A.</li>
+        <li>Group B:
+            <ul>
+                <li>Subgroup 1.</li>
+                <li>Subgroup 2:
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Group C.</li>
+    </ol>
+
+    <!-- Description lists -->
+    <!-- Términos y definiciones, Preguntas y respuestas -->
+    <!-- Puede haber dos términos o definiciones para la misma definición o término. -->
+    <dl>
+        <dt>Description term 1</dt>
+        <dd>Description details 1</dd>
+        <dt>Description term 2</dt>
+        <dt>Description term 3</dt>
+        <dd>Description details 2</dd>
+        <dt>Description term 4</dt>
+        <dd>Description details 3</dd>
+        <dd>Description details 4</dd>
+    </dl>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- LINKS                                                                             -->
+    <!--------------------------------------------------------------------------------------->
+
+    <p>
+        <!-- Anchor -->
+        <!-- href = " ": Hypertext reference -->
+        <!-- Hyperlink: Es lo que hace que una web sea una web (Red) -->
+        <!-- Hyperlink: Puede ser un texto u otro elemento (Block-level links) -->
+        <!-- title = " ": Información suplementaria útil sobre el link -->
+        <a href="#" title="Enlace a la misma página">Link text</a>
+
+        <!-- URL: Uniform Resource Locator -->
+        <!-- Puede dirigir a archivos html, text, images, documents, video y audio -->
+
+        <!-- Absolute URL: De un sitio a otro. Protocol + Domain name -->
+        <a href="https://developer.mozilla.org/en-US/">De un sitio a otro</a>
+        <!-- Relative URL: No es necesario el dominio. Sólo la ruta del archivo.
+            De una página a otra del mismo sitio. Depende de la localización del documento -->
+        <a href="folder/index.html">De una página a otra del mismo sitio</a>
+        <!-- Para secciones de la página o regresar al inicio de la página -->
+        <!-- Para secciones de otra página: href="...#id-name" -->
+        <a href="#main-heading">Inicio de página</a>
+        <!-- Para abrir en nueva ventana o pestaña -->
+        <a href="folder/index.html" target="_blank">Abre en nueva ventana</a>
+        <!-- Para abrir una aplicación de e-mail -->
+        <!-- Header fields: cc, bcc, subject -->
+        <!-- Ver URL query notation -->
+        <a href="mailto: flavet.89@gmail.com">Enviar correo</a>
+        <a href="mailto: flavet.89@gmail.com,flavet_89@hotmail.com?cc=flavet.89@gmail.com&bcc=flavet.89@gmail.com&subject=Asunto%20del%20correo&body=Short%20content%20message.">
+            Enviar correo con detalles</a>
+
+        <!-- Block-level links -->
+        <!-- Puede ser cualquier elemento como un <section> o <article> -->
+        <a href="https://katieblogsets.blogia.com/" target="_blank">
+            <img src="images/link-image.jpg" alt="Mujer desnuda sentada cubriéndose
+                con sábana el torso">
+        </a>
+    </p>
+    <hr />
+    
+    <!--------------------------------------------------------------------------------------->
+    <!-- LAYOUT                                                                            -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Tradicionalmente se usaban <div>s. Ejemplo: -->
+    <div id="page">
+        <div id="header">
+            <div id="nav"></div>
+        </div>
+        <div id="content">
+            <div class="article"></div>
+            <div class="article"></div>
+        </div>
+        <div id="sidebar"></div>
+        <div id="footer"></div>
+    </div>
+    <!-- Nuevos elementos HTML5: Screen readers, Search engines. Ejemplo anterior: -->
+    <div id="page">
+        <header>
+            <nav></nav>
+        </header>
+        <div id="content">
+            <article></article>
+            <article></article>
+        </div>
+        <aside></aside>
+        <footer></footer>
+    </div>
+
+    <!-- Semantic wrappers ------------------------------------------------------------------>
+
+    <!-- Header: Big heading, logo y tagline. Usualmente la misma en el sitio.
+        Grupo de contenido introductorio. En <article> o <section> no es igual
+        a titles o headings. (Títulos y fechas) -->
+    <header>Header</header>
+
+    <!-- Navigation bar: Enlaces a las principales partes del sitio.
+        Menu buttons, links o tabs. Usualmente igual en el sitio (Recomendable).
+        Puede o no ser parte del header, incluso puede ser mejor que estén separados
+        para la accesibilidad (Screen readers).
+        Navegación principal (No links secundarios). -->
+    <!-- FIXME: Algunos desarrolladores lo usan para los enlaces del <footer> -->
+    <nav>Navigation bar</nav>
+
+    <!-- Main content: Contenido único por página: video, historia, mapa, titulares...
+        Sólo uno por página y directamente dentro de body. Idealmente no debería estar
+        anidado a otros. -->
+    <main>Main</main>
+
+    <!-- Article: Contenido relacionado, que tiene sentido por sí mismo (P.e. un post) -->
+    <!-- Entrada de blog, comentario, ... -->
+    <!-- Puede anidarse entre si: Post: articulo, comentarios. -->
+    <article>Article</article>
+
+    <!-- Section: Similar a <article>, agrupa por funcionalidad: minimapas, grupos de
+        artículos, titulares o resúmenes. <article> y <section> pueden anidarse entre sí.
+        Un articulo largo puede estar dividido en secciones. -->
+    <!-- Contenido relacionado (Incluso con un título).
+        Ultimas noticias, productos destacados, subscripciones... -->
+    <!-- No como contenedor de toda la página, mejor <div> -->
+    <section>Section</section>
+
+    <!-- Sidebar: Información periférica, links, citas, ads, posts, a search box, tweets, etc.
+        Generalmente está en contexto a Main content. También sistema de navegación secundaria.
+        Glossary entries, author biography, related links.
+        Frecuentemente dentro de <main> -->
+    <!-- Dentro de <article> información relacionada, no escencial: citas o glosario. En contexto. -->
+    <aside>Sidebar</aside>
+
+    <!-- Footer: Letra pequeña. Copyright o contact info. Privacy policy, terms and conditions.
+        También para <article> o <section>: Enlaces para compartir el artículo en redes sociales.
+        Información común a la página (Tipo header) pero secundaria.
+        SEO: Links acceso rápido a popular content. -->
+    <footer>Footer</footer>
+
+    <!-- Headings groups: Contenedor de encabezados: <h1>, <h2>, <h3>, ... -->
+    <!-- Algunos desarrolladores prefieren usar un <p class="subtitle"> como contenedor del subtitulo -->
+    <hgroup>
+        <h2>Titulo</h2>
+        <h3>Subtitulo</h3>
+    </hgroup>
+
+    <!-- Non-Semantic wrappers -------------------------------------------------------------->
+
+    <!-- Cuando no hay un elemento semántico adecuado o para agrupar elementos
+        para CSS o JS. Usualmente con class=" " o id=" ". -->
+    <!-- Puede contener otros elementos inline -->
+    <span>Inline non-semantic element</span>
+    <!-- Añadir un comentario al final de cada div -->
+    <div>Block-level non-semantic element</div>
+
+    <!-- Para navegadores antiguos, los elementos HTML5 son tratados como elementos inline.
+        Con CSS otorgar la propiedad block. Usar para estilizar HTML5 shiv o shim
+    
+        <!- -[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/
+        trunk/html5.js"></script>
+        <![endif]- -> -->
+
+    <!-- Linebreaks and Horizontal Rules ---------------------------------------------------->
+
+    <br /> <!-- Añade un salto de línea, en párrafos generalmente -->
+    <hr /> <!-- Para indicar un cambio de tema -->
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- IMAGES                                                                            -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Logos, fotografías, ilustraciones, diagramas o gráficos -->
+    <!-- src = " ": Source -->
+    <!-- alt = " ": Alternative text. Texto descriptivo y preciso para Screen readers
+        o página con errores o imágenes desactivadas. También la usan los buscadores.
+        Para imágenes decorativas: alt="". Mejor usar CSS: background-image.
+        Para links incluir un texto adjunto o sólo con el atributo alt.
+        Imágenes con texto no debería usarse (CSS mejor), en tal caso incluir el texto. -->
+    <!-- title = " ": Información adicional sobre la imagen. Mejor incluirlo dentro del
+        contenido principal. No es fácil acceder a esta información. -->
+    <img src="images/my-image.jpg" alt="Mujer desnuda de pie dentro de piscina"
+        title="Caroline Ray es una joven actriz de cine erótico" />
+
+    <!-- Imagen antes de párrafo -->
+    <img src="images/paragraph-image.jpg"
+        alt="Retrato de gatito sacando la lengua" height="100" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis. Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+    <!-- Imagen dentro del inicio de párrafo -->
+    <p><img src="images/paragraph-image.jpg"
+        alt="Retrato de gatito sacando la lengua" height="100" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis. Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+    <!-- Imagen en el medio de un párrafo -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis.
+        <img src="images/paragraph-image.jpg"
+        alt="Retrato de gatito sacando la lengua" height="100" /> Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+
+    <!-- Código antiguo -->
+    <!-- height = " " width = " ": Especificar el tamaño para que lo demás se acomode
+        mientras se procesa la página. Valor está en pixels. Mejor en CSS -->
+    <!-- align="left/right" align="top/middle/bottom" : Ya no en html5, mejor en CSS -->
+    <p><img src="images/paragraph-image.jpg"
+        alt="Retrato de gatito sacando la lengua" align="right" height="100" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis. Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+    <p><img src="images/paragraph-image.jpg"
+        alt="Retrato de gatito sacando la lengua" align="middle" height="150" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend
+        porttitor velit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Integer venenatis pretium ex quis porta. Morbi nulla nunc, finibus volutpat
+        ultricies eu, laoreet ac felis. Aliquam aliquam vehicula sagittis. Integer vel
+        dolor sit amet elit rhoncus euismod. Integer feugiat sem dolor, sit amet posuere
+        arcu cursus sed. Donec feugiat odio egestas dignissim vulputate. Sed ultricies
+        gravida lobortis. Ut eget ligula eget turpis consequat rutrum eu malesuada elit.</p>
+    
+    <!-- Imágenes con leyenda: Ayuda a Screen readers -->
+    <!-- Pueden haber varias imágenes dentro del mismo <figure> -->
+    <!-- alt="" y <figcaption> no deben decir lo mismo. Información que ayuda a videntes también -->
+    <!-- <figure> puede ser también un fragmento de código, audio, video, ecuaciones, tabla,
+        gráficos, diagramas, texto complementario, etc -->
+    <!-- Para contenido de referencia, no debe ser relevante al contenido principal. -->
+    <!-- <figcaption> descripción del contenido -->
+    <figure>
+        <img src="images/figure-image.jpg" alt="Retrato medio cuerpo de mujer desnuda" />
+        <figcaption>Caroline Ray.</figcaption>
+    </figure>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- VIDEO AND AUDIO                                                                   -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Antes Flash y Silverlight: No trabajaban bien con las características de HTML/CSS,
+        problemas de seguridad y accesibilidad -->
+    <!-- Para video antes se usaban players y plugins, volviendose obsoletos con HTML5 -->
+    <!-- Usar servidores de video para almacenar: youtube, vimeo -->
+    <!-- Usar <video> con al menos dos formatos: Webm y MP4 -->
+    <!-- Los controles se pueden personalizar con Javascript -->
+
+    <!-- controls: Mínimo se debe proveer para reproducir/parar y volumen -->
+    <!-- Fallback content: Para navegadores antiguos que no reconocen <video> -->
+    <!-- Container formats: Mp3, Mp4, WebM. Contienen: Metadata (Título de película,
+        duración, tipos de track, etc), Audio tracks (Inglés, español, comentarios),
+        Video tracks, Text tracks. Usan audio y video codecs:
+        - WebM: Vorbis u Opus audio + VP8/VP9 video.
+                Compatible con todos los navegadores actuales, no muy bien con los antiguos.
+        - MP4:  AAC o MP3 audio + H.264 video.
+                Compatible con todos los navegadores actuales, incluso Internet explorer.
+        - Ogg:  Vorbis audio + Theora video.
+                Tiene mejor compatibilidad con Firefox y Chrome, pero ha sido desbancado por
+                la mejor calidad de WebM.
+        - MP3:  MPEG-1 Audio Layer III (MP3) audio almacenado en un MPEG o MPEG-2. -->
+    <!-- El formato FLAC no usa un contenedor. -->
+    <!-- Un reproductor de audio suelen reproducir audio tracks directamente, sin un
+        contenedor, como archivos MP3 u Ogg. -->
+    <video src="video/chicken.mp4" controls width="640" poster="images/poster-image.jpg">
+        <p>Your browser doesn't support HTML5 video. Here is a
+            <a href="video/chicken.mp4">link to the video</a> instead.</p>
+    </video>
+
+    <!-- Los formatos de contenedores y codecs dependen del navegador y dispositivo. -->
+    <!-- MP4 y WebM es suficiente para que el video corra en la mayoría de plataformas
+        y navegadores estos días. -->
+    <!-- Recomendable incluir type="", así los buscadores descartan rápidamente los
+        formatos no compatibles. Contiene MIME type: audio/ogg, image/png, etc -->
+    <!-- width="" height="": También con CSS. Se mantiene el aspect ratio. -->
+    <!-- autoplay: Inicia la reproducción del video mientras está cargando la página.
+        Es aconsejable no usarlo, puede ser molestoso. -->
+    <!-- loop: Repite el video una vez finalizado. -->
+    <!-- muted: Inicia el video con volumen cero. -->
+    <!-- poster = " ": Para pantalla de bienvenida o de advertencia. -->
+    <!-- preload = "none/auto/metadata" : No almacena, almacena el video, sólo metadata.
+        Para almacenar archivos grandes. -->
+    <video controls width="640" height="320" autoplay loop muted preload="none">
+        <source src="video/chicken.mp4" type="video/mp4" />
+        <source src="video/chicken.webm" type="video/webm" />
+        <p>Your browser doesn't support HTML5 video. Here is a
+            <a href="video/chicken.mp4">link to the video</a> instead.</p>
+    </video>
+
+    <!-- Con codecs ??? -->
+    <video poster="images/puppy.jpg" width="400"
+        height="320" preload controls loop>
+        <source src="video/puppy.mp4" type='video/
+        mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+        <source src="video/puppy.webm" type='video/
+        webm;codecs="vp8, vorbis"' />
+        <p>A video of a puppy playing in the snow</p>
+    </video>
+
+    <!-- Similar a <video>. No usa width, height ni poster. -->
+    <!-- autoplay: Mejor que los visitantes decidan escuchar el audio -->
+    <!-- preload, loop -->
+    <!-- Al menos .mp3 y .ogg -->
+    <audio controls>
+        <source src="audio/ice-queen.mp3" type="audio/mp3" />
+        <source src="audio/ice-queen.ogg" type="audio/ogg" />
+        <p>Your browser doesn't support HTML5 audio. Here is a
+            <a href="audio/ice-queen.mp3">link to the audio</a> instead.</p>
+    </audio>
+
+    <!-- Video text tracks -->
+    <!-- Personas con problemas de audición, si se está en un lugar bullicioso,
+        o donde no se puede hacer ruido, o cuando está en otro idioma (Traducción). -->
+    <!-- Incluso pueden ayudar con el SEO -->
+    <!-- WebVTT: Formato de texto con metadata: tiempo del texto y limitado estilo
+        y posicionamiento. Cada string se conoce como Cue. -->
+    <!-- kind = " " : Tipo de Cue: subtitles, captions, descriptions -->
+    <!-- srclang = " " : Lenguaje en que se han escrito los subtítulos -->
+    <video controls width="320">
+        <source src="video/chicken.mp4" type="video/mp4" />
+        <source src="video/chicken.mp4" type="video/webm" />
+        <track kind="subtitles" src="video/chicken.vtt" srclang="en" />
+    </video>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- OTHER EMBEDDING TECHNOLOGIES                                                      -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Mediados de los 90: Una web (Frameset) se componía de pequeñas partes (Frames) -->
+    <!-- Fines 90's inicios 2000's: Plugin technologies: Java Applets y Flash: Videos y
+        animaciones. <object> <embed> -->
+
+    <!-- Iframes: Inline frame -->
+    <!-- Iframes: Videos, commenting systems, mapas, advertising banners, etc -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H5Kkw-Puhho"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.2805111508774!2d-77.04798043569723!3d-12.024199303334285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf23c5f21533%3A0x83b579316211f372!2sUniversidad%20Nacional%20de%20Ingenier%C3%ADa!5e0!3m2!1ses-419!2spe!4v1584569791705!5m2!1ses-419!2spe"
+        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0"></iframe>
+    
+    <!-- scrolling="yes/no/auto" (Ya no en Html5) -->
+    <!-- seamless="seamless" (No scrollbars) -->
+
+    <!-- allowfullscreen: Permite pantalla completa usando Full Screen API -->
+    <!-- frameborder="0": Inserción sin borde (Recomendado). "1" añade un borde.
+        (Ya no en Html5).
+        Equivalente en CSS a: border: none; -->
+    <!-- sandbox: Permisos para acciones de la página incrustada.
+        Nunca usar: allow-scripts allow-same-origin -->
+    <!-- Seguridad en iframes: clickjacking, costo de datos, etc -->
+    <!-- Nunca incluir contenido de páginas sin HTTPS (Es decir, con HTTP). -->
+    <!-- Cuidado con el copyright, pedir los permisos necesarios, referenciar en citas. -->
+    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500"
+        frameborder="0" allowfullscreen sandbox>
+        <p> 
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+            Fallback link for browsers that don't support iframes
+            </a>
+        </p></iframe>
+
+    <!-- Se usaban para almacenar Flash. Formato en adobe: .fla, en web: .swf -->
+    <!-- Flash ya no será soportado por ningún navegador después del 2020. -->
+    <!-- Alternativa al usar Flash: swfobject.embedSWF(url, id-div, width, height, minimum version Flash) -->
+    <!-- <head>
+        <title>Adding a Flash Movie</title>
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/
+        swfobject/2.2/swfobject.js"></script>
+        <script type="text/javascript">
+        swfobject.embedSWF("flash/bird.swf",
+        "bird", "400", "300", "8.0.0");</script>
+        </head>
+        <body>
+            Para Screen readers, buscadores y si no hay soporte para Flash
+        <div id="bird"><p>An animation of a bird taking
+        a shower</p></div>
+    </body> -->
+    <embed src="" type="">
+    <object data="" type=""></object>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- VECTOR GRAPHICS                                                                   -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Imágenes vectoriales son mucho más ligeras que sus análogas ráster. -->
+    <!-- Textos permanecen accesibles (SEO) -->
+    <!-- Pueden ser estilizados o manipulados por CSS o Javascript -->
+    <!-- Desventajas: 
+        - Complejos SVG pueden tardar en renderizar.
+        - Dependiendo del tipo de imagen pueden ser más difícil de crear que en ráster.
+        - No son compatibles con navegadores antiguos. -->
+
+    <!-- Método por <img>: No se puede manipular con Javascript. Para estilizar usar
+        inline CSS styles. No se puede usar pseudoclasses CSS (:focus). -->
+    <img src="images/vector-image.svg" alt="Rectángulo negro con círculo azul en su centro"
+        width="300" height="200" />
+
+    <!-- Para compatibilidad con antiguos navegadores -->
+    <img src="images/vector-image.png" alt="Rectángulo negro con círculo azul en su centro"
+        srcset="images/vector-image.svg" />
+    <!-- En CSS:    background: url("fallback.png") no-repeat center;
+                    background-image: url("image.svg");
+                    background-size: contain; -->
+    <!-- No puede ser manipulado por Javascript. -->
+
+    <!-- SVG inline o inlining SVG -->
+    <!-- Ahorra un pedido HTTP y reduce un poco el tiempo de carga -->
+    <!-- Se puede estilizar con CSS, añadir Clases & Id, cualquier atributo SVG de
+        presentación se puede usar como propiedad CSS -->
+    <!-- Se puede animar con CSS y usar interacciones CSS (:focus) -->
+    <!-- Incluir un elemento SVG dentro de un enlace -->
+    <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="green" />
+    </svg>
+    <svg width="300" height="200">
+        <a href="">
+            <circle cx="150" cy="100" r="90" fill="red" />
+        </a>   
+    </svg>
+    <!-- Desventajas:
+        - Sólo si se usa el archivo .svg en sólo un lugar.
+        - Código SVG adicional incrementa el tamaño del archivo HTML.
+        - Navegadores no lo almacenan en caché.
+        - Se puede incluir fallback en <foreignObject>, pero navegadores que lean el SVG
+            también lo descargarán. -->
+
+    <!-- En <iframe> -->
+    <!-- No recomendable. No siempre permite manipulación Javascript. Fallback sólo
+        se muestra si el navegador no soporta <iframe>s. -->
+    <iframe src="images/vector-image.svg" frameborder="0" width="300" height="200" sandbox>
+        <img src="images/vector-image.png" alt="Rectángulo negro con círculo azul en su centro">
+    </iframe>
+
+    <svg width="50%" height="100%">
+        <rect width="100%" height="100%" fill="red" />
+        <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+        <polygon points="120,0 240,225 0,225" fill="green"/>
+        <text x="50" y="100" font-family="Verdana" font-size="55" fill="white"
+            stroke="black" stroke-width="2">
+                Hello!
+        </text>
+    </svg>
+
+    <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="black" />
+        <polygon points="150,0 150,200 0,0" fill="white" />
+    </svg>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- RESPONSIVE IMAGES                                                                 -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Art direction problem: Cómo recortar la imagen para cada resolución. -->
+    <!-- media="(condition)" srcset="": Puede combinarse con sizes="" -->
+    <!-- Cuando se use media="" no usar condiciones dentro de sizes="" -->
+    <picture>
+        <source media="(max-width: 799px)" srcset="images/elva-480w-close-portrait.jpg" />
+        <source media="(min-width: 800px)" srcset="images/elva-800w.jpg" />
+        <img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
+    </picture>
+
+    <!-- Resolution switching problem: Tamaño adecuado para cada dispositivo. -->
+    <!-- srcset="image-url tamaño real de la imagen" -->
+    <!-- sizes="(media-condition) El espacio a rellenar por la imagen: px, em, vw (no %)" -->
+    <!-- El navegador busca que condición es correcta, aplica el espacio indicado,
+        luego busca el tamaño más cercano al espacio en srcset. -->
+    <!-- src="" para navegadores antiguos. -->
+    <img srcset="images/header-480w.jpg 480w,
+                 images/header-800w.jpg 800w"
+         sizes="(max-width: 600px) 480px,
+                800px"
+         src="images/header-800w.jpg" alt="Forest" />
+    <!-- Si se trabaja con diferentes display resolutions, pero con el mismo tamaño. -->
+    <img srcset="images/elva-fairy-320w.jpg,
+                 images/elva-fairy-480w.jpg 1.5x,
+                 images/elva-fairy-640w.jpg 2x"
+         src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy" />
+
+    <!-- Para formatos no soportados por todos los navegadores, usar type="MIME" -->
+    <!-- Formatos nuevos como WebP o JPEG-2000 -->
+    <!-- Así el navegador descarta rápidamente el formato no compatible -->
+    <!-- Usar media="" sólo si se necesita Art direction -->
+    <picture>
+        <source type="image/svg+xml" srcset="images/pyramid.svg" />
+        <source type="image/webp" srcset="images/pyramid.webp" /> 
+        <img src="images/pyramid.png"
+            alt="regular pyramid built from four equilateral triangles" />
+    </picture>
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- TABLES                                                                            -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Tables: Información en cuadros. Escritas fila por fila. -->
+    <!-- No usar para el layout: reduce accesibilidad, código dificil de mantener, 
+        no es responsive. -->
+    <!-- <th>: Usado por Screen readers, buscadores y CSS. -->
+    <!-- Celdas <td> <th> pueden estar vacías. -->
+    <!-- scope = " ": Para indicar si pertenece a una columna o fila.
+                    - colgroup si es el encabezado de otros encabezados de columna.
+                    - rowgroup de manera análoga. -->
+    <!-- colspan = " ": Permite combinar <td> o <th> en fila. -->
+    <!-- rowspan = " ": Permite combinar <td> o <th> en columna. -->
+    <!-- <thead> <tbody> <tfoot>: Para la apariencia CSS. -->
+    <!-- <thead> <tfoot>: En tablas largas se pueden mantener visibles y navegar por el
+        resto del cuerpo con scroll. Para la apariencia CSS -->
+    <table>
+        <!-- <caption> iría aquí -->
+        <!-- <colgroup> iría aquí -->
+        <thead> <!-- Encabezados de la tabla -->
+            <tr> <!-- Table row-->
+                <th>&nbsp;</th> <!-- Table heading -->
+                <th scope="col">Celdas 1</th>
+                <th scope="col">Celdas 2</th>
+                <th scope="col">Celdas 3</th>
+                <th scope="col">Celdas 4</th>
+            </tr>
+        </thead>
+        <!-- Siempre se incluirá a pesar que no se haya escrito en el código. -->
+        <tbody>
+            <tr> 
+                <th scope="row">Celdas A</th> 
+                <td>Celda A1</td> <!-- Table data (Table cell) -->
+                <td>Celda A2</td>
+                <td>Celda A3</td>
+                <td>Celda A4</td>
+            </tr>
+            <tr>
+                <th scope="row">Celdas B</th>
+                <td>Celda B1</td>
+                <td>Celda B2</td>
+                <td>Celda B3</td>
+                <td>Celda B4</td>
+            </tr>
+            <tr>
+                <th scope="row">Celdas C</th>
+                <td>Celda C1</td>
+                <td>Celda C2</td>
+                <td>Celda C3</td>
+                <td>Celda C4</td>
+            </tr>
+            <tr>
+                <th scope="row">Celdas X</th>
+                <td colspan="2">Celda X1 + X2</td>
+                <td>Celda X3</td>
+                <td rowspan="2">Celda X4 + Y4</td>
+            </tr>
+            <tr>
+                <th scope="row">Celdas Y</th>
+                <td colspan="2">Celda Y1 + Y2</td>
+                <td>Celda Y3</td>
+            </tr>
+        </tbody>
+        <!-- Puede ir debajo de <thead> e igual se renderizará al final. -->
+        <tfoot>
+            <tr>
+                <th></th>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Para manipular la presentación de columnas: <colgroup> <col> -->
+    <!-- span=" " : Similar a colspan o rowspan -->
+    <!-- summary=" " : Similar a <caption> ya no se usa. -->
+    <table summary="Deprecated">
+        <!-- Útil para Screen readers -->
+        <caption>Description of the table contents</caption>
+        <colgroup>
+          <col>
+          <col style="background-color: yellow" span="2">
+        </colgroup>
+        <tr>
+          <th>Data 1</th>
+          <th>Data 2</th>
+          <th>Data 3</th>
+        </tr>
+        <tr>
+          <td>Calcutta</td>
+          <td>Pizza</td>
+          <td>Pizza</td>
+        </tr>
+        <tr>
+          <td>Robots</td>
+          <td>Jazz</td>
+          <td>Jazz</td>
+        </tr>
+    </table>
+
+    <!-- Nesting Tables -->
+    <!-- No recomendable, código más confuso y menor accesibilidad. -->
+    <!-- Puede ser útil cuando se quiera importar contenido de otras fuentes. -->
+    <table>
+        <tr>
+          <th>title1</th>
+          <th>title2</th>
+          <th>title3</th>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>cell1</td>
+                <td>cell2</td>
+                <td>cell3</td>
+              </tr>
+            </table>
+          </td>
+          <td>cell2</td>
+          <td>cell3</td>
+        </tr>
+        <tr>
+          <td>cell4</td>
+          <td>cell5</td>
+          <td>cell6</td>
+        </tr>
+    </table>
+
+    <!-- Tables for visually impaired users -->
+    <!-- 1. Usar <th>s -->
+    <!-- 2. Añadir scope="" a <th>s -->
+    <!-- 3. Usar id="" en cada <th> y asociarlos a cada <td> con headers="" -->
+    <!-- Método más preciso pero usa más código, generalmente es suficiente con scope="" -->
+    <table>
+        <tr>
+            <th id="head-0">&nbsp;</th>
+            <th id="head-1">Head 1</th>
+            <th id="head-2">Head 2</th>
+            <th id="head-3">Head 3</th>
+        </tr>
+        <tr>
+            <th id="row-1">Row 1</th>
+            <td headers="head-1 row-1">A</td>
+            <td headers="head-2 row-1">B</td>
+            <td headers="head-3 row-1">C</td>
+        </tr>
+        <tr>
+            <th id="row-2">Row 2</th>
+            <td headers="head-1 row-2">D</td>
+            <td headers="head-2 row-2">E</td>
+            <td headers="head-3 row-2">F</td>
+        </tr>
+    </table>
+
+    <!-- Código antiguo: Ahora se realiza en CSS:
+        - width = " "       :   En pixeles. En <table>, <th>, <td>
+        - cellpadding = " " :   En pixeles. En <table>
+        - cellspacing = " " :   En pixeles. En <table>
+        - border = " "      :   En pixeles. En <table>, <th>, <td>
+        - bgcolor = " "     :   En hexcode. En <table>, <th>, <td> -->
+    <hr />
+
+    <!--------------------------------------------------------------------------------------->
+    <!-- FORMS                                                                             -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Recolectar información de los usuarios -->
+    <!-- La información se procesa en base a cada name="" -->
+    <!-- name=" "   : Cuidado con cambiar su valor. -->
+
+    <!-- PROHIBIDO anidar un <form> dentro de otro <form> -->
+    <!-- action=" " : URL a donde va la información. -->
+    <!-- method=" " : HTTP method:
+        - get(default): Los datos van por la URL. Para formularios cortos.
+            Cuando la información no va a ser añadida o borrada de
+            la Base de Datos.
+        - post: Los datos van por HTTP headers. Para formularios largos.
+            Para subir archivos. Para datos confidenciales (Contraseñas).
+            Añadir o borrar información de la Base de Datos. -->
+    <!-- id=" "     : Para usar con scripts. Para chequear la información ingresada. -->
+    <form action="" method="get">
+        <!-- Native Form controls (Widgets) -->
+        <!-- <input>    : Insertar sólo texto plano. -->
+        <!-- autofocus  : true/false(default)" -->
+        <!-- form       : para asociar un input externo a un form -->
+        <!-- name="" -->
+        <!-- type=" "   : "text" por defecto o de respaldo -->
+        <!-- readonly   : No puede ser cambiado pero será enviado -->
+        <!-- disabled   : true/false(default) No puede ser cambiado y tampoco será enviado -->
+        <!-- placeholder="" : Se puede usar en cualquier text input -->
+        <!-- spellcheck : Si será spell checking, depende del navegador (Experimental) -->
+        <!-- Text Input fields -->
+        <!-- Single-line text fields -->
+        <!-- value=" "      : Valor que se muestra por defecto. -->
+        <!-- size=" "       : # de caracteres mostrados. Ahora en CSS. -->
+        <!-- maxlength=" "  : Máximo # de caracteres que se pueden ingresar. -->
+        <input type="text" name="" value="Default value" size="20"  maxlength="40" />
+
+        <!-- Password (Input) field -->
+        <!-- No usarlo solo para información confidencial: SSL -->
+        <!-- https://... los datos son encriptados antes de ser enviados -->
+        <input type="password" name="" size="15" maxlength="30" />
+
+        <!-- Hidden Controls (content) -->
+        <!-- Para que usuarios no vean. Por ejemplo para colocar en qué página se está.
+            O para enviar un timestamp (Marca temporal) -->
+        <!-- No debe tener un label asociado -->
+        <input type="hidden" name="" value="" />
+
+        <!-- Checkable items -->
+        <!-- Si no tienen check, no son enviados; y si no tienen valor: value="on" -->
+        <!-- Para mejor usabilidad: Encerrarlos en fieldset con legend -->
+
+        <!-- Checkbox -->
+        <!-- Usado como Toggle button (Toggle switch) -->
+        <input type="checkbox" name="optC" id="" value="Option 1" />Option 1
+        <input type="checkbox" name="optC" id="" value="Option 2" checked="checked" />Option 2
+        <input type="checkbox" name="optC" id="" value="Option 3" />Option 3
+
+        <!-- Radio Button -->
+        <!-- Si el usuario necesita ver todas las opciones. -->
+        <input type="radio" name="optR" id="" value="Option 1" />Option 1
+        <input type="radio" name="optR" id="" value="Option 2" checked="checked" />Option 2
+        <input type="radio" name="optR" id="" value="Option 3" />Option 3
+        <!-- /Checkable items -->
+
+        <!-- Buttons -->
+        <!-- Submit Button -->
+        <!-- Para enviar la información al servidor. -->
+        <!-- Puede tener un name="" aunque no es necesario. -->
+        <input type="submit" value="Send" />
+        <input type="reset" value="Reset">
+        <!-- Anonymous -->
+        <input type="button" value="Button">
+
+        <!-- Image Button -->
+        <!-- Para enviar la información al servidor (Submit button). -->
+        <!-- Se pueden incluir todos los atributos de <img> + <input> -->
+        <!-- El valor enviado es las coordenadas de la imagen. Origen: arriba-izquierda -->
+        <!-- ...?pos.x=123&pos.y=456 -->
+        <input type="image" name="pos" src="images/submit.png" alt="" width="128" height="" />
+
+        <!-- Button -->
+        <!-- Para enviar la información al servidor. -->
+        <!-- Se puede incluir texto e imágenes. O cualquier otro elemento HTML -->
+        <!-- type=" " : submit: para enviar la información al servidor (Por defecto)
+                        reset:  devuelve a los valores por defecto (UX: Mala práctica)
+                        button: para usarlo con Javascript
+            Similares a input: submit, reset, button; pero más estilizables. -->
+        <button>
+            <img type="submit" src="images/submit.png" alt="" width="64">Aceptar
+        </button>
+        <!-- /Buttons -->
+
+        <!-- File Input Box - File picker-->
+        <!-- Enviado usando el método POST -->
+        <!-- accept="image/*" : Para indicar el tipo de archivos admitidos -->
+        <!-- multiple : Para aceptar más de un archivo -->
+        <input type="file" name="" id="" />
+        <!-- Para acceder a camara y microfono de mobile devices -->
+        <input type="file" accept="image/*;capture=camera" />
+        <input type="file" accept="video/*;capture=camcorder" />
+        <input type="file" accept="audio/*;capture=microphone" />
+
+        <!-- HTML5 Form controls (Widgets) -->
+
+        <!-- HTML5 -->
+        <!-- Navegadores antiguos lo tratan como <input> de texto -->
+        <!-- En el caso de email y url, tel, number generan un teclado apropiado. -->
+        <!-- Email Input -->
+        <!-- Validación: a@b -->
+        <!-- multiple : ingresar varios correos -->
+        <input type="email" name="" id="" />
+        <!-- Search Input -->
+        <!-- placeholder="" : Se puede usar en cualquier text input -->
+        <input type="search" name="" id="" placeholder="Qué deseas?" />
+        <!-- Phone number field -->
+        <!-- Ninguna restricción -->
+        <!-- Rangos extensos de numeros: USA ZIP codes -->
+        <input type="tel" name="" id="">
+        <!-- URL Input -->
+        <!-- Validación: http: -->
+        <input type="url" name="" id="" />
+        <!-- Numeric field -->
+        <!-- Edad o peso, rango de valores limitado -->
+        <!-- Validación: sólo numeros enteros -->
+        <!-- min="" max="" : Valores minimo y maximo permitidos -->
+        <!-- step="" : Incremento por los spinner: enteros o reales -->
+        <!-- step="any" : Para validar reales -->
+        <input type="number" name="" id="">
+        <!-- Slider controls -->
+        <!-- Números donde la presición no es importante -->
+        <!-- min max step value(valor inicial) -->
+        <input type="range" name="" id="price">
+        <!-- Como no muestran ningun valor, usar: -->
+        <!-- Se puede usa cualquier elemento, pero outpu es adecuado por el for="" -->
+        <!-- Necesario añadir un script para visualizar el precio -->
+        <output class="price-output" for="price"></output>
+        <!-- Date Input -->
+        <!-- min="" max="" (El formato depende del tipo de fecha) step="" -->
+        <!-- No todos los navegadores tienen implementados estos tipos -->
+        <!-- Usar Javascript para mayor soporte o framework y librerías -->
+        <input type="datetime-local" name="" id="">
+        <input type="month" name="" id="">
+        <input type="time" name="" id="">
+        <input type="week" name="" id="">
+        <input type="date" name="" id="" />
+        <!-- Color picker -->
+        <!-- Valor devuelto es en hexadecimal y en minusculas: aa120f -->
+        <input type="color" name="" id="">
+
+        <!-- Other forms controls -->
+        <!-- Multi-line text fields -->
+        <!-- Text Area -->
+        <!-- cols="20" rows="2" : Ahora en CSS. -->
+        <!-- wrap="soft(default)/hard/off" Como envuelve a las palabras completas -->
+        <!-- Javascript para borrar el texto por defecto cuando el usuario haga click. -->
+        <!-- El area es ajustable por defecto -->
+        <!-- Se puede controlar en CSS: resize: both;(default)
+                horizontal; vertical; none; block(experimental) inline(experimental) -->
+        <textarea name="" id="" cols="30" rows="10" wrap="off">Texto por defecto.
+            <p>fdfsf</p></textarea>
+
+        <!-- Dropdown List controls -->
+        <!-- Select box -->
+        <!-- Si la lista es muy larga. -->
+        <!-- La primera opción es selected por defecto. -->
+        <!-- Si el value="" de las opciones es omitido, envia el contenido -->
+        <select name="" id="">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3" selected="selected">Option 3</option>
+        </select>
+        <!-- Para mejorar la presentación -->
+        <select name="" id="">
+            <optgroup label="Group 1">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3" selected="selected">Option 3</option>
+            </optgroup>
+            <optgroup label="Group 2">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3" selected="selected">Option 3</option>
+            </optgroup>
+        </select>
+        <!-- Multiple Select Box -->
+        <!-- size=" "       : Indica el número de opciones a mostrar. Testearlo. -->
+        <!-- multiple=" "   : Permite seleccionar varias opciones. -->
+        <!-- Indicar a los usuarios que pueden seleccionar varias opciones (Ctrl+click) -->
+        <select name="" id="" size="3" multiple="multiple">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3" selected="selected">Option 3</option>
+            <option value="Option 4">Option 4</option>
+            <option value="Option 5">Option 5</option>
+        </select>
+        <!-- Autocomplete box -->
+        <!-- Permite elegir una opción o escribir una nueva, con input en general -->
+        <!-- Se puede combinar con range para añadir marcas encima -->
+        <!-- o con color para una paleta personalizada. Considerar a cada navegador. -->
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </datalist>
+        <!-- Para navegadores antiguos -->
+        <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+        <input type="text" id="myFruit" name="fruit" list="fruitList">
+        <!-- datalist ignora todo lo que no sea <option> -->
+        <datalist id="fruitList">
+        <label for="suggestion">or pick a fruit</label>
+        <select id="suggestion" name="altFruit">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </select>
+        </datalist>
+
+        <!-- Meters and progress bar -->
+        <!-- Progress -->
+        <!-- numero de archivos descargados, numero de preguntas resueltas, etc -->
+        <!-- El contenido es un fallback para navegadores que no lo soportan o
+            para Screen readers -->
+        <progress max="100" value="75">75/100</progress>
+        <!-- Meter -->
+        <!-- espacio usado o libre en disco -->
+        <!-- El contenido es un fallback para navegadores que no lo soportan o
+            para Screen readers -->
+        <!-- Lower part: min-low -->
+        <!-- Medium part: low-high -->
+        <!-- High part: high-max -->
+        <!-- Si optimum en lower:   lower-prefered, medium-average,     high-worst -->
+        <!-- Si optimum en medium:  lower-average,  medium-prefered,    high-average -->
+        <!-- Si optimum en high:    lower-worst,    medium-average,     high-prefered -->
+        <!-- Prefered part: Green -->
+        <!-- Average part: Yellow -->
+        <!-- Worst part: Red -->
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="80">75</meter>
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="20">75</meter>
+
+        <!-- Labelling form controls -->
+        <!-- Para usabilidad y accesibilidad. Cada campo debe tener su propio label. -->
+        <!-- Puede encerrar el texto y el campo a la vez o ir separado con for="" -->
+        <!-- for="" : Enlaza el <label> al "id" del campo deseado. -->
+        <!-- Con label se puede clickar en mayor área. -->
+        <!-- Donde colocar label:
+                - Arriba o izquierda de : Text input, textareas, select boxes, file uploads.
+                - Abajo o derecha de    : Individual checkboxes y radio buttons. -->
+        <!-- Buena práctica: En ambos casos asociar con for="" para asegurar la relación. -->
+        <label for="">Data: <input type="text" name="" id="" /></label>
+        <label for="data">Data: </label>
+        <input type="text" name="" id="data" />
+
+        <!-- Multiple label -->
+        <!-- Incluir siempre la regla de campos requeridos -->
+        <!-- Para que Screen readers lean: aria-label=" " -->
+        <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+        <!-- So this: -->
+        <!-- Puede ser confuso para Screen readers -->
+        <!-- Screen reader: "edit text blank" -->
+        <div>
+            <label for="username">Name:</label>
+            <input id="username" type="text" name="username">
+            <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
+        </div>
+        <!-- would be better done like this: -->
+        <!-- Campos separados, pero relacionados al input -->
+        <!-- Screen reader: "name star edit text required" -->
+        <div>
+            <label for="username">
+                <span>Name:</span>
+                <input id="username" type="text" name="username">
+                <abbr title="required" aria-label="required">*</abbr>
+            </label>
+        </div>
+        <!-- But this is probably best: -->
+        <!-- Screen reader: "name required edit text" -->
+        <div>
+            <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
+            <input id="username" type="text" name="username">
+        </div>
+
+        <!-- Grouping form elements -->
+        <!-- Para formularios largos. Agrupar campos similares. Para estilizar. -->
+        <!-- Screen readers leerán <legend> antes de cada campo. Útil para Radio buttons. -->
+        <!-- Testearlo con un Screen reader y mejorarlo de ser necesario. -->
+        <fieldset>
+            <legend>Form group:</legend>
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+        </fieldset>
+        <!-- Estructurar un formulario: 
+            - <li> <ol> <ul> dentro de <fieldset> recomendado para checkboxes y radio buttons.
+            - <p> y <div> para cada label y su widget.
+            - <h1>, <h2>..., <section>... para formularios complejos + <fieldset> -->
+
+        <!-- Form validation -->
+        <!-- Tradicionalmente realizado con Javascript. HTML5: Validación realizada por
+            el navegador. Reduce el trabajo del servidor. Permite a los usuarios ver los
+            errores en el formulario más rápido. -->
+        <input type="text" name="" id="" required />
+
+        
+    </form>
+
+    <!-- Se puede tener un widget fuera de un <form> asociar con form="" -->
+    <input type="text" name="name" id="" form="form">
+    <form action="" method="get" id="form">
+        <input type="submit" value="Send">
+    </form>
+
+    <script src="js/slider.js"></script>
+</body>
+</html>
+
+<!--------------------------------------------------------------------------------------------------
+
+Requisitos básicos:
+    > Familiarización básica con el uso de computadoras y usando la web pasivamente
+    > Computadora: Desktop o Laptop
+    > Sistema operativo: Windows, macOS, Linux
+    > Editor de texto (Text Editor): Visual Studio Code (Recomendado!), Notepad++,
+        Sublime Text, Atom, GNU Emacs, VIM
+        Hybrid editor: Dreamweaver, Webstorm
+    > Navegadores web (Web browser): Firefox, Chrome, Opera, Safari, IE o Edge, Brave
+        Para testear código (Por lo menos dos navegadores)
+    > (Opcional) Instalar unservidor web local (Revisar en MDN)
+
+Requisitos avanzados (Herramientas del profesional):
+    > Editor de gráficos: GIMP, Paint.NET, Photoshop o XD. Para imágenes y gráficos
+    > A version control system: Administrar archivos en servidores, colaborar en un proyecto
+        en equipo, compartir código y recursos y evitar conflictos de edición.
+        Git con servicios de hosting: GitHub o GitLab
+    > An FTP Program: usado en hostings antiguos (GIT está reemplazándolo).
+        Cyberduck, Fetch, FileZilla
+    > An automation system: Grunt o Gulp. Para tareas repetitivas como minificar código o
+        correr tests
+    > Templates, libraries, frameworks: Acelerar la escritura de funciones comunes
+
+Dirigido a:
+    > Designers - Website editors - Marketers - Managers
+
+Cómo acceder a la web:
+    > Navegadores web (Web browsers): 
+        - Dirección web (Web Address) - Enlaces (Links) - Marcadores (Bookmarks)
+    > Servidores web (Web Servers)
+    > Devices: Desktops, Laptops, Tablets, Mobile phones
+    > Screen readers: Visual impairment people o cuando no se puede leer: trotando o manejando.
+
+Cómo funciona la web:
+    > Conexión a internet vía Internet Service Provider (ISP)
+    > Escribir dominio o dirección web
+    > Contacto a Domain Name Server (DNS)
+    > Retorna IP address (Número de hasta 12 dígitos) asociado al dominio
+    > Computadora se contacta con Web server
+    > Web server devuelve la información de la página solicitada
+    > Navegador interpreta el código
+
+Niveles de complejidad:
+    > Páginas pequeñas: HTML + CSS 
+    > Páginas grandes: Tecnologías en el servidor que producen HTML y CSS 
+    > Páginas más grandes y complejas: Base de datos + PHP, ASP.Net, Java, Ruby
+
+Tecnologías:
+    > HTML 5: Describe la estructura de la página
+    > CSS 3
+
+Tipos de páginas:
+    > Plantillas (Templates): CMS, Blog, E-commerce
+
+Ejemplos de textos estructurados:
+    > Periódicos, Formularios, Catálogos, Historias, Textos escolares, Revistas
+    > Listas de compras, de direcciones para ir a casa, de instrucciones para un tutorial,
+        Recetas de cocina
+    > Festival de cine
+    > Financial reports, TV schedules, Sport results, Horarios
+    > Buscadores, Registro de miembros, Compras online
+    > Recetas de cocina
+
+Planning:
+    > Sobre qué trata? Tema
+    > Qué información tendrá? Título, algunos párrafos, una imagen
+    > Cómo quieres que se vea? En términos generales: color de fondo, tipo de fuente:
+        formal, caricaturesca, negra y fuerte, sutil?
+    > Para proyectos complejos: Guidelines: colores, fuentes, espaciado entre
+        elementos de la página, estilo de escritura apropiado, etc.
+        Design Guide, Design System o Brand Book (Revisar en MDN)
+
+Sketching out your design:
+    > Lápiz y papel
+    > Dibujar a groso modo cómo se verá la página (Hábito recomendado)
+    > Web complejas reales:
+        - Boceto en papel -> Digital mockups (Editor gráfico o tecnologías web)
+        - Graphic designer & User experience designer (UI & UX)
+
+Choosing your assets:
+    > Colocar todo el contenido que eventualmente aparecerá en la web:
+        - Texto
+        - Color del tema: Hex code (Hexadecimal)
+        - Imágenes: Usar filtro para imágenes con copyright
+        - Fuentes: Google fonts: Copiar código HTML, CSS
+
+Dealing with files:
+    > Lugar de almacenamiento: ../web-projects/test-site/
+    > Estructura del sitio web:
+        - index.html - ../styles/ - ../scripts/ 
+        - ../images/ (Recomendado por Google para el SEO)
+    > Rutas de los archivos (File paths):
+        - Mismo directorio (Same folder):       my-image.jpg
+        - Subdirectorio (Child folder):         folder/my-image.jpg
+        - Directorio padre (Parent folder):     ../my-image.jpg
+        - Combinado:                            ../../folder/sub-folder/my-image.jpg
+        (No importa: / o \)
+    > Cada carpeta (Directorio) tiene su propio index.html (Homepage)
+    > Ruta.../folder/ -> Lleva al index.html de ese folder
+    > ../images/ : 
+        - ../interface/     Logos and buttons
+        - ../products/      Product photographs
+        - ../news/          Related images
+
+Planning a simple website:
+    > Estructura de la página: Information Architecture.
+        (Contenido, páginas a necesitar y cómo se enlazan.)
+        1. Común a todo: Header, footer
+        2. Boceto de la estructura de cada página
+        3. Escribir todo el contenido adicional que irá (Lista general)
+        4. Agruparlos (Card sorting)
+        5. Boceto del mapa del sitio: Burbujas de cada página con título y notas del contenido,
+            enlazadas entre sí con flechas.
+
+Proceso de desarrollo:
+    > HTML: Escribir contenido
+    > HTML: Estructurar: Etiquetas
+    > CSS: Presentación
+    > CSS: Layout
+
+Recomendaciones Sintaxis:
+    > Etiquetas en minúsculas.
+    > Nombre de atributos en minúsculas.
+    > Valor de atributos entre comillas.
+    > Elementos vacíos: <etiqueta />
+
+Recomendaciones:
+    > Aprender del código de otras páginas, ver el código fuente.
+    > Tener en cuenta las versiones de los navegadores.
+    > Tener en cuenta los tamaños de pantalla y las velocidades de conexión de los aparatos.
+    > Testear para móbiles y navegadores antiguos: IE 8-10.
+    > Testear para Screen readers: Lynx.
+    > Nombrar los archivos con minúsculas y sin espacios, para separar palabras usar "-".
+
+    > Estructurar el contenido hace el leer más fácil y disfrutable.
+    > Usar sólo un <h1> por página.
+    > Usar headings en estricto orden de jerarquía: h2 > h3 > h4...
+    > No usar más de 3 heading por página (h1, h2, h3) o 4 a lo mucho. Muchos dificultan el
+        manejo y la navegación. Mejor distribuir en varias páginas el contenido, si es posible.
+    > Por qué es necesario estructurar?
+        - Usuarios buscan contenido relevante y pasan poco tiempo en páginas (Pocos segundos).
+        - Buscadores usan los heading como keywords (SEO).
+        - Screen readers pueden leer primero los encabezados para evitar leer todo el contenido.
+        - Añadir estilos CSS y cosas con Javascript.
+    > Por qué es necesario la semántica?
+        - Añaden significado al contenido como las luces del semáforo.
+        - Para el SEO y Screen readers (Accesibilidad).
+    > Semántica: Usar los elementos HTML relevantes para cada caso.
+    > Usar <span> sólo para añadir estilos CSS.
+    > El subrayado está muy asociado a los enlaces, usar otro estilo de línea (wavy) para <u>.
+
+    > Links: Textos específicos, claros y concisos:
+        - Independientes del contexto.
+        - Mantener un textos corto.
+        - Reducir copias del mismo texto que mandan a diferentes lugares.
+        - Deben explicar a dónde llevan (Evitar "click here").
+        - Para que la gente encuentre lo que quiere. Da una mejor impresión al sitio.
+        - Ayuda a los Screen readers saltar de uno a otro.
+        - Search engines: Keywords en links los usan para indexar.
+        - Personas echan un vistazo rápido, entonces un texto descriptivo es bien útil:
+            * Download Firefox vs. Click here (to download firefox).
+        - Pensar en palabras que la gente usa para buscar la página (Más específico):
+            * Places to stay -> Hotels in New York.
+        - No usar la URL como texto del enlace.
+        - No incluir "link to" o "enlace a".
+        - Convención de estilo: Subrayado y/o de otro color.
+    > Usar URL relativas siempre que sea posible:
+        - Más cortas -> Código más legible.
+        - Más eficiente (Evita ir a DNS y a Server nuevamente).
+    > Contenido que será descargado (PDF, Word), streamed (Video, Audio) u otro efecto
+        (Open a popus window o cargar Flash movie) añadir una clara expresión para
+        reducir cualquier confusión:
+        - Download the sales report (PDF, 10MB)
+        - Watch the video (Stream opens in separate tab, HD quality)
+        - Play the car game (Requires Flash)
+    > Usar download="nombre-por-defecto-del-archivo.extensión" en enlaces de descarga.
+    > Si el link va a otro sitio web: Abrir en otra ventana, ya que se espera que el usuario
+        regrese a la página anterior. Avisar que se abrirá en nueva ventana antes de hacer click.
+    > title=" ": Qué tipo de información tiene la página o avisos de advertencia. Tener en cuenta
+        que sólo es accesible por hover (Información no importante).
+
+    > En menús de navegación eliminar el enlace a sí mismo de la página actual, es confuso y
+        sin sentido. Una visualización diferente recordará en que página se está.
+    > Empezar cada <section> con un <heading>.
+
+    > Guardar imágenes en carpeta "images" para el SEO (Recomendado por Google).
+    > Usar nombres descriptivos a los archivos de imagen para el SEO.
+    > Imágenes deben ser relevantes, que transmitan información, adecuado estado de ánimo,
+        sean rápidamente identificables y acordes a la paleta de colores.
+    > Cuidar el copyright de las imágenes.
+    > Hotlinking: No usar imágenes almacenadas en otros sitios (Pueden ser borrados e ilegal).
+    > Ver página con imágenes desactivadas para comprobar la utilidad del atributo alt.
+    > Formato adecuado:
+        - Imágenes Ráster (Bitmap):
+            * .jpg          Imágenes con muchos colores.
+            * .gif, .png    Imágenes con pocos colores (Logos, ilustraciones, diagramas).
+                            Imágenes con extensas áreas de color plano.
+        - Imágenes Vectoriales:
+            * .svg          Imágenes lineales (Logos, ilustraciones, diagramas).
+                            Se guardaba una versión en bitmap para subir a la web.
+        - Gifs animados:    
+            * Sólo para ilustraciones simples. Cuidar el número de frames (Tamaño de archivo).
+    > Tamaño adecuado:
+        - Mismo tamaño al que aparecerá en la web.
+        - Reducir al tamaño necesario.
+        - No aumentar su tamaño, se puede ver borroso o pixeleado.
+        - Algunas imágenes se pueden cortar sin que pierdan su sentido.
+    > Resolución adecuada:
+        - Máximo 72ppi.
+    > Transparencias:
+        - Líneas rectas, 100% transparente:                         .gif
+        - Líneas diagonales, redondeadas, semiopaco y con sombras:  .png
+    > Páginas con muchas fotografías, con un fondo simple y consistente ayudará a que
+        se vean mejor como grupo.
+
+    > Para mejorar la velocidad de carga (SEO) con Javascript establecer el contenido de src
+        en iframe después de la carga del contenido principal.
+
+    > UX: Mantener formularios pequeños, enfocados en lo absolutamente necesario.
+
+Recursos:
+    > Imágenes:
+        - www.istockphoto.com
+        - www.gettyimages.com
+        - www.veer.com
+        - www.sxc.com
+        - www.fotolia.com
+    > Editores de imagen:
+        - Adobe Fireworks
+        - Pixelmator
+        - Paintshop Pro
+        - Paint.net
+    > Editores de imagen online:
+        - www.pixlr.com
+        - www.ipiccy.com
+    > Trazados vectoriales:
+        - Inkscape
+        - Illustrator
+    > Multimedia:
+        - Miro Video Converter
+        - Audacity
+    > Commenting system:
+        - Disqus
+    > Screen readers:
+        - Jaws
+        - NVDA
+        - VoiceOver
+    > Almacenar video:
+        - Youtube
+        - Vimeo
+    > Almacenar audio:
+        - SoundCloud
+        - MySpace
+    
+A Revisar:
+    > hCard
+    > Google's webmaster tools: Incluir sitelink en los resultados de búsqueda
+    > URL query notation
+    > Information Architecture
+    > Choosing images for your site (Jon Duckett's Page)
+    > Elección de contenedor, video y audio codecs en MDN
+    > CSP: Content Security Policy
+    > X-Frame-Options header
+    > Secure Sockets Layer (SSL)
+    > www.uxmatters.com
+
+Prácticas:
+    > HTML text fundamentals.
+    > Creating hyperlinks.
+    > Advanced text formatting.
+    > Document and website structure.
+    > Assessment: Semántica del texto.
+    > Assessment: Estructura del documento.
+    > Images in HTML.
+    > Video and audio content.
+    > Other embedding technologies.
+    > Assessment: Mozilla splash page.
+    > Assessment: Structuring planet data.
+
+--------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------
+    ROOT ELEMENT:
+    01  <html>...</html>
+    02  <head>...</head>
+    03  <title>...</title>
+    04  <body>...</body>
+    05  <h1>...</h1>
+    06  <h2>...</h2>
+    07  <h3>...</h3>
+    08  <h4>...</h4>
+    09  <h5>...</h5>
+    10  <h6>...</h6>
+    11  <p>...</p>
+    11  <b>...</b>
+    11  <i>...</i>
+    11  <p>...</p>
+
+    00  <acronym>...</acronym>
+--------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------
+    01  lang = "en-US"
+    01  cite = "dirección web"
+    01  class = "identificador-de-clase"
+    00  src = 
+--------------------------------------------------------------------------------------------------->

@@ -1,0 +1,19 @@
+\usepackage{xstring}
+
+\newcommand{\Fourier}[1][eq]{
+    \IfEqCase {#1}{
+        {eq}{
+            \begin{equation}
+                \hat{f}(\xi) = \int_{-\infty}^{+\infty}f(x)e^{-2\pi ix\xi}dx
+            \end{equation}
+        }
+        {disp}{
+            \[
+                \hat{f}(\xi) = \int_{-\infty}^{+\infty}f(x)e^{-2\pi ix\xi}dx
+            \]
+        }
+        {inLine}{
+            $\hat{f}(\xi) = \int_{-\infty}^{+\infty}f(x)e^{-2\pi ix\xi}dx$
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app" class="container mt-5">
+        <h1>{{titulo}}</h1>
+
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+        <button @click="agregarFruta">Agregar</button>
+
+        <ul>
+            <li v-for="fruta of frutas">
+                {{fruta.nombre}}
+                <span v-if="fruta.cantidad === 0">(Sin stock)</span>
+                <input type="text" v-model="fruta.cantidad">
+                <button @click="fruta.cantidad++">+</button>
+                <button @click="fruta.cantidad--">-</button>
+            </li>
+        </ul>
+
+        <p>Total: {{sumarFrutas}}</p>
+
+        <div :class="['p-3', 'text-white', fondo]">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat facilis a eum labore quis ducimus laborum aspernatur dignissimos fuga quasi totam eveniet eos adipisci, delectus itaque praesentium dicta temporibus nobis?
+            </p>
+        </div>
+        <input type="text" class="form-control my-3" v-model="fondo">
+        <div class="p-3 text-white" :class="{'bg-info' : color, 'bg-success' : !color}">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat facilis a eum labore quis ducimus laborum aspernatur dignissimos fuga quasi totam eveniet eos adipisci, delectus itaque praesentium dicta temporibus nobis?
+            </p>
+        </div>
+        <button class="btn btn-primary" @click="color = !color">Cambiar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main-vue.js"></script>
+</body>
+</html>

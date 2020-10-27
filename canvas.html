@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            /* width: 50%; */
+            /* height: 50vh; */
+            background-color: #ccc;
+        }
+    </style>
+    <script>
+        var y = 0;              // Usado en la animación
+        var estado = 'down';    // Usado en la animación
+        var maximo = y;         // Usado en la animación
+
+        function iniciar()
+        {
+            var elLienzo1 = document.getElementById('lienzo-1');
+            var elLienzo2 = document.getElementById('lienzo-2');
+            var elLienzo3 = document.getElementById('lienzo-3');
+            var elLienzo4 = document.getElementById('lienzo-4');
+            var elLienzo5 = document.getElementById('lienzo-5');
+            var elLienzo6 = document.getElementById('lienzo-6');
+            var elLienzo7 = document.getElementById('lienzo-7');
+            var elLienzo8 = document.getElementById('lienzo-8');
+            var elLienzo9 = document.getElementById('lienzo-9');
+            var elLienzo10 = document.getElementById('lienzo-10');
+            var elLienzo11 = document.getElementById('lienzo-11');
+            var elLienzo12 = document.getElementById('lienzo-12');
+
+            lienzo1 = elLienzo1.getContext('2d');
+            lienzo2 = elLienzo2.getContext('2d');
+            lienzo3 = elLienzo3.getContext('2d');
+            lienzo4 = elLienzo4.getContext('2d');
+            lienzo5 = elLienzo5.getContext('2d');
+            lienzo6 = elLienzo6.getContext('2d');
+            lienzo7 = elLienzo7.getContext('2d');
+            lienzo8 = elLienzo8.getContext('2d');
+            lienzo9 = elLienzo9.getContext('2d');
+            lienzo10 = elLienzo10.getContext('2d');
+            lienzo11 = elLienzo11.getContext('2d');
+            lienzo12 = elLienzo12.getContext('2d');
+
+            // RECTANGULOS
+            lienzo1.globalAlpha = 0.2;
+            lienzo1.fillStyle = '#20aa22';
+            lienzo1.fillRect(100, 100, 100, 100);
+            lienzo1.globalAlpha = 1;
+            lienzo1.strokeStyle = 'red';
+            lienzo1.strokeRect(300, 100, 100, 100);
+            lienzo1.clearRect(150, 125, 200, 50);
+            
+            // GRADIENTES
+            var degradado = lienzo2.createLinearGradient(100, 150, 200, 150);
+            degradado.addColorStop(0, 'red');
+            degradado.addColorStop(1, 'green');
+            lienzo2.fillStyle = degradado;
+            lienzo2.fillRect(100, 100, 100, 100);
+
+            degradado = lienzo2.createRadialGradient(350, 150, 0, 350, 150, 50);
+            degradado.addColorStop(0, 'red');
+            degradado.addColorStop(1, 'green');
+            lienzo2.fillStyle = degradado;
+            lienzo2.fillRect(300, 100, 100, 100);
+
+            // TRAZADOS
+            lienzo3.beginPath();
+            lienzo3.moveTo(100, 200);
+            lienzo3.lineTo(400, 200);
+            lienzo3.lineTo(250, 100);
+            lienzo3.lineTo(100, 200);
+            lienzo3.closePath();
+            lienzo3.fill();
+            lienzo3.strokeStyle = '#20aa22';
+            lienzo3.stroke();
+
+            lienzo3.beginPath();
+            lienzo3.moveTo(100, 200);
+            lienzo3.lineTo(300, 200);
+            lienzo3.lineTo(250, 50);
+            lienzo3.lineTo(100, 200);
+            lienzo3.clip();
+            
+            lienzo3.beginPath();
+            for(var i = 0; i < 15; i++)
+            {
+                lienzo3.moveTo(0, 60 + i * 10);
+                lienzo3.lineTo(500, 60 + i * 10);
+            }
+            lienzo3.stroke();
+
+            lienzo4.beginPath();
+            lienzo4.arc(250, 200, 150, 0, Math.PI, true);
+            lienzo4.fill();
+            
+            lienzo4.beginPath();
+            lienzo4.moveTo(100, 200);
+            lienzo4.quadraticCurveTo(250, 50, 400, 200);
+            lienzo4.strokeStyle = 'red';
+            lienzo4.stroke();
+
+            lienzo4.beginPath();
+            lienzo4.moveTo(100, 200);
+            lienzo4.bezierCurveTo(175, 50, 325, 250, 400, 200);
+            lienzo4.strokeStyle = 'green';
+            lienzo4.stroke();
+
+            // PROPIEDADES DE LINEAS
+            lienzo5.beginPath();
+            lienzo5.arc(250, 150, 100, 0, 2*Math.PI, true);
+            lienzo5.fillStyle = 'rgb(241, 190, 123)';
+            lienzo5.fill();
+
+            lienzo5.lineWidth = 8;
+            lienzo5.lineCap = 'round';
+            lienzo5.beginPath()
+            lienzo5.arc(250, 150, 80, 1, Math.PI, false);
+            lienzo5.stroke();
+            
+            lienzo5.lineCap = 'round';
+            lienzo5.lineJoin = 'miter';
+            lienzo5.beginPath()
+            lienzo5.moveTo(260, 125);
+            lienzo5.lineTo(260, 175);
+            lienzo5.lineTo(240, 175);
+            lienzo5.stroke();
+
+            lienzo5.lineWidth = 1;
+            lienzo5.beginPath()
+            lienzo5.arc(210, 110, 20, 0, 2*Math.PI, true);
+            lienzo5.fillStyle = 'black';
+            lienzo5.fill();
+
+            // TEXTOS
+            lienzo6.font = 'bold 60px Verdana';
+            lienzo6.textAlign = 'center';
+            lienzo6.textBaseline = 'middle';
+            lienzo6.shadowColor = '#888';
+            lienzo6.shadowOffsetX = 5;
+            lienzo6.shadowOffsetY = 5;
+            lienzo6.shadowBlur = 3;
+            lienzo6.fillText('Hola Mundo!', 250, 90);
+            lienzo6.strokeText('Hola Mundo!', 250, 210);
+
+            var dimensiones = lienzo6.measureText('Hola Mundo!');
+            var b = dimensiones.width;
+            lienzo6.strokeRect(250 - b/2, 180, b, 60);
+
+            // TRANSFORMACIONES
+            lienzo7.font = "bold 20px verdana";
+            lienzo7.textBaseline = 'top';
+            lienzo7.fillText('Hello World!', 50, 50);
+            lienzo7.translate(50, 200);
+            lienzo7.rotate(-Math.PI / 12);
+            lienzo7.scale(2, 1);
+            lienzo7.fillText('Hello World!', 50, 50);
+
+            lienzo7.transform(0.5, Math.PI / 12, -Math.PI / 12, 1, 0, 0);
+            lienzo7.fillText('Hello World!', 0, -50);
+
+            lienzo7.setTransform(1, 0, -Math.PI / 12, 1, 300, 50);
+            lienzo7.fillText('Hello World!', 0, 0);
+
+            // SUPERPOSICIONES
+            lienzo8.fillStyle = 'red';
+            lienzo8.fillRect(50, 50, 300, 150);
+            lienzo8.globalCompositeOperation = 'lighter';
+            lienzo8.fillStyle = 'green';
+            lienzo8.fillRect(150, 100, 300, 150);
+
+            // IMAGENES
+            var imagen = new Image();
+            imagen.src = 'images/my-image.jpg';
+            imagen.addEventListener('load', function()
+            {
+                var alto = 200;
+                var ancho = imagen.width*alto/imagen.height;
+                lienzo9.drawImage(imagen, 50, 50, ancho, alto);
+                lienzo9.drawImage(imagen, 0, 0, imagen.width, imagen.width, 250, 50, 200, 200);
+            }, false);
+
+            // IMAGENES COMO DATOS
+            imagen.addEventListener('load', manipularImagen, false);
+
+            // ANIMACIONES
+            window.setInterval(animacion, 50);
+
+            window.addEventListener('mousemove', ojosAnim, false);
+        }
+
+        function manipularImagen(e)
+        {
+            imagen = e.target;
+            var ancho = 480;
+            var alto = imagen.height*ancho/imagen.width;
+            lienzo10.drawImage(imagen, 0, 40, imagen.width * 2 / 3, imagen.width, 90, 10, 320, 480);
+
+            var infoImagen = lienzo10.getImageData(90, 10, 240, 280);
+            var posicion;
+
+            for(let x = 0; x < 240; x++)
+                for(let y = 0; y < 280; y++)
+                {
+                    posicion = (infoImagen.width * y * 4) + (x * 4);
+                    // Negativo del rojo
+                    infoImagen.data[posicion] = 255 - infoImagen.data[posicion];
+                    // Negativo del verde
+                    infoImagen.data[posicion + 1] = 255 - infoImagen.data[posicion + 1];
+                    // Negativo del azul
+                    infoImagen.data[posicion + 2] = 255 - infoImagen.data[posicion + 2];
+                }
+
+            lienzo10.putImageData(infoImagen, 90, 10);
+        }
+
+        function animacion()
+        {
+            if(y <= 225 && estado === 'down')
+            {
+                lienzo11.clearRect(0, 0, 500, 300);
+                lienzo11.beginPath();
+                lienzo11.arc(250, 50 + y, 25, 0, 2*Math.PI, false);
+                lienzo11.fillStyle = '#111111';
+                lienzo11.fill();
+                y += 25;
+            }
+            else if(y >= maximo && estado === 'up')
+            {
+                lienzo11.clearRect(0, 0, 500, 300);
+                lienzo11.beginPath();
+                lienzo11.arc(250, 50 + y, 25, 0, 2*Math.PI, false);
+                lienzo11.fillStyle = '#111111';
+                lienzo11.fill();
+                y -= 25;
+            }
+            
+            if(y === 225)
+            {
+                estado = 'up';
+                maximo += 25;
+            }
+
+            if(y === maximo)
+            {
+                estado = 'down';
+            }
+        }
+
+        function ojosAnim(e)
+        {
+            var el = document.getElementById('lienzo-12')
+            var mouseX = e.clientX;
+            var mouseY = e.clientY;
+            var centerX = el.getBoundingClientRect().left + 250;
+            var centerY = el.getBoundingClientRect().top + 150;
+
+            var angulo = Math.atan2(mouseX - centerX, mouseY - centerY);
+            var x = 250 + Math.round(Math.sin(angulo) * 30);
+            var y = 150 + Math.round(Math.cos(angulo) * 30);
+
+            lienzo12.beginPath();
+            lienzo12.arc(250, 150, 50, 0, Math.PI * 2, false);
+            lienzo12.fillStyle = '#eeeeee';
+            lienzo12.fill();
+
+            lienzo12.beginPath();
+            lienzo12.arc(x, y, 20, 0, Math.PI * 2, false);
+            lienzo12.fillStyle = '#111111';
+            lienzo12.fill();
+        }
+
+        window.addEventListener('DOMContentLoaded', iniciar, false);
+    </script>
+</head>
+<body>
+    <section id="dibujo">
+        <canvas id="lienzo-1" width="500" height="300"></canvas>
+        <canvas id="lienzo-2" width="500" height="300"></canvas>
+        <canvas id="lienzo-3" width="500" height="300"></canvas>
+        <canvas id="lienzo-4" width="500" height="300"></canvas>
+        <canvas id="lienzo-5" width="500" height="300"></canvas>
+        <canvas id="lienzo-6" width="500" height="300"></canvas>
+        <canvas id="lienzo-7" width="500" height="300"></canvas>
+        <canvas id="lienzo-8" width="500" height="300"></canvas>
+        <canvas id="lienzo-9" width="500" height="300"></canvas>
+        <canvas id="lienzo-10" width="500" height="300"></canvas>
+        <canvas id="lienzo-11" width="500" height="300"></canvas>
+        <canvas id="lienzo-12" width="500" height="300"></canvas>
+    </section>
+</body>
+</html>

@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\contentsline {subsection}{\numberline {0.1}Título de la subsección}{1}%
+\contentsline {section}{\numberline {1}Título de la sección}{2}%
+\contentsline {subsection}{\numberline {1.1}Título de la subsección}{2}%
+\contentsline {subsubsection}{\numberline {1.1.1}Título de la subsubsección}{2}%
+\contentsline {paragraph}{Título del párrafo}{2}%
+\contentsline {section}{\numberline {2}Título de la sección}{4}%
+\contentsline {section}{\numberline {3}Título de la sección}{5}%
+\contentsline {section}{\numberline {4}Título de la sección}{6}%
+\contentsline {section}{\numberline {5}Título muy largo de sección}{6}%
+\contentsline {section}{\numberline {6}Columnas de diferentes anchos}{7}%
+\contentsline {section}{\numberline {7}Expresiones Matemáticas}{8}%
+\contentsline {section}{\numberline {8}Elementos flotantes}{9}%

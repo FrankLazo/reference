@@ -1,0 +1,17 @@
+@use 'partial';
+
+$mainColor: #124589;
+
+h1 {
+    color: $mainColor;
+}
+
+nav {
+    ul {
+        background-color: gray;
+    }
+
+    li {
+        color: white;
+    }
+}

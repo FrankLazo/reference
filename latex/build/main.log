@@ -1,0 +1,542 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  10 MAY 2020 02:32
+entering extended mode
+**"d:/Diseño web/latex/main.tex"
+("d:/Diseño web/latex/main.tex"
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-04-06> ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/03/22 3.42 The Babel package
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+\es@quottoks=\toks17
+\es@quotdepth=\count177
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen136
+)) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen137
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count178
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count179
+\leftroot@=\count180
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count181
+\DOTSCASE@=\count182
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen138
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count183
+\c@MaxMatrixCols=\count184
+\dotsspace@=\muskip16
+\c@parentequation=\count185
+\dspbrk@lvl=\count186
+\tag@help=\toks19
+\row@=\count187
+\column@=\count188
+\maxfields@=\count189
+\andhelp@=\toks20
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty" ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-04-06 L3 programming layer (loader) 
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count190
+\l__pdf_internal_box=\box47
+)) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty"
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count191
+\g__xparse_grabber_int=\count192
+\l__xparse_m_args_int=\count193
+\l__xparse_v_nesting_int=\count194
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex"
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+)) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count195
+\mult@box=\box48
+\multicol@leftmargin=\dimen145
+\c@unbalance=\count196
+\c@collectmore=\count197
+\doublecol@number=\count198
+\multicoltolerance=\count199
+\multicolpretolerance=\count266
+\full@width=\dimen146
+\page@free=\dimen147
+\premulticols=\dimen148
+\postmulticols=\dimen149
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box49
+\last@line=\box50
+\maxbalancingoverflow=\dimen150
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\c@minrows=\count267
+\c@columnbadness=\count268
+\c@finalcolumnbadness=\count269
+\last@try=\dimen151
+\multicolovershoot=\dimen152
+\multicolundershoot=\dimen153
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count270
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paracol\paracol.sty"
+Package: paracol 2018/12/31 v1.35 
+\pcol@currcol=\count271
+\pcol@nextcol=\count272
+\pcol@ncol=\count273
+\pcol@ncolleft=\count274
+\pcol@page=\count275
+\pcol@basepage=\count276
+\pcol@toppage=\count277
+\pcol@footnotebase=\count278
+\pcol@nfootnotes=\count279
+\pcol@mcid=\count280
+\pcol@prevdepth=\dimen154
+\pcol@colht=\dimen155
+\pcol@textfloatsep=\dimen156
+\pcol@lrmargin=\dimen157
+\pagerim=\dimen158
+\pcol@topskip=\skip54
+\belowfootnoteskip=\skip55
+\pcol@topfnotes=\box94
+\pcol@prespan=\box95
+\pcol@rightpage=\box96
+\pcol@colorstack@saved=\box97
+\pcol@tempboxa=\box98
+\pcol@tempboxb=\box99
+\pcol@colorins=\insert252
+\pcol@everyvbox=\toks23
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen161
+\WF@size=\dimen162
+\c@WF@wrappedlines=\count281
+\WF@box=\box100
+\WF@everypar=\toks25
+Package: wrapfig 2003/01/31  v 3.6
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/slashbox\slashbox.sty"
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box101
+\@slashboxb=\box102
+\@slashboxc=\box103
+\@slashboxwd=\count282
+\@slashboxht=\count283
+\@slashsepl=\dimen163
+\@slashsepr=\dimen164
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box104
+\extrarowheight=\dimen166
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box105
+)
+\everycr=\toks27
+\minrowclearance=\skip58
+) (colors.tex) (dicEcuaciones.tex ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xstring\xstring.sty" ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
+\integerpart=\count284
+\decimalpart=\count285
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+))
+\c@theorem=\count286
+ ("d:/Diseño web\latex\build\main.aux")
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+ ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen167
+\scratchbox=\box106
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen168
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks29
+) ("C:\Users\Frank\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+)
+No file main.toc.
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+No file main.lof.
+\tf@lof=\write4
+\openout4 = `main.lof'.
+
+No file main.lot.
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+[1
+
+{C:/Users/Frank/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
+Overfull \hbox (6.81366pt too wide) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 mau-ris. Nam ar-cu li-be-ro, no-nummy eget,
+ []
+
+
+Overfull \hbox (4.42583pt too wide) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 so-da-les, so-lli-ci-tu-din vel, wi-si. Mor-bi auc-
+ []
+
+
+Overfull \hbox (4.14587pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/10 Nulla ma-le-sua-da port-ti-tor diam. Do-
+ []
+
+
+Overfull \hbox (0.84029pt too wide) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 ve-rra fer-men-tum fe-lis. Do-nec no-nummy
+ []
+
+
+Overfull \hbox (1.59027pt too wide) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 nu-lla vi-tae enim. Pe-llen-tes-que tin-ci-dunt
+ []
+
+
+Overfull \hbox (8.34691pt too wide) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 pu-rus vel mag-na. In-te-ger non enim. Prae-
+ []
+
+
+Overfull \hbox (5.47253pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/10 Quisque ullam-cor-per pla-ce-rat ip-sum.
+ []
+
+
+Overfull \hbox (7.89581pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/10 Fusce mau-ris. Ves-ti-bu-lum luc-tus nibh
+ []
+
+[5
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]\OT1/cmr/m/n/10 Nam dui li-gu-la,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\OT1/cmr/m/n/10 ac-cum-san bi-ben-dum,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\OT1/cmr/m/n/10 Cum so-ciis na-to-que
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 85--85
+\OT1/cmr/m/n/10 pe-na-ti-bus et mag-nis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]\OT1/cmr/m/n/10 Nulla ma-le-sua-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\OT1/cmr/m/n/10 ti-bu-lum pe-llen-tes-que
+ []
+
+[6
+
+]
+Overfull \hbox (6.33899pt too wide) in paragraph at lines 95--95
+\OT1/cmr/m/n/10 ip-sum li-gu-la, elei-fend at, ac-cum-san nec,
+ []
+
+
+Overfull \hbox (1.23224pt too wide) in paragraph at lines 95--95
+\OT1/cmr/m/n/10 enim. Pe-llen-tes-que tin-ci-dunt pu-rus vel
+ []
+
+
+Overfull \hbox (9.32222pt too wide) in paragraph at lines 95--95
+\OT1/cmr/m/n/10 mag-na. In-te-ger non enim. Prae-sent euis-
+ []
+
+
+Overfull \hbox (0.93355pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 ul-tri-ces. Lo-rem ip-sum do-lor sit
+ []
+
+
+Overfull \hbox (5.37798pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 elit. In hac ha-bi-tas-se pla-tea dic-
+ []
+
+
+Overfull \hbox (4.19022pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 llis au-gue. Etiam fa-ci-li-sis. Nunc
+ []
+
+
+Overfull \hbox (6.73909pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 ele-men-tum fer-men-tum wi-si. Ae-
+ []
+
+
+Overfull \hbox (5.90027pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 fe-lis odio pla-ce-rat quam, ac pul-
+ []
+
+
+Overfull \hbox (7.32245pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 vi-nar elit pu-rus eget enim. Nunc
+ []
+
+
+Overfull \hbox (4.43361pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 vi-tae tor-tor. Proin tem-pus nibh
+ []
+
+
+Overfull \hbox (3.01688pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 sit amet nisl. Vi-va-mus quis tor-
+ []
+
+
+Overfull \hbox (5.37798pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 elit. In hac ha-bi-tas-se pla-tea dic-
+ []
+
+
+Overfull \hbox (4.19022pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 llis au-gue. Etiam fa-ci-li-sis. Nunc
+ []
+
+
+Overfull \hbox (6.73909pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 ele-men-tum fer-men-tum wi-si. Ae-
+ []
+
+
+Overfull \hbox (5.90027pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 fe-lis odio pla-ce-rat quam, ac pul-
+ []
+
+
+Overfull \hbox (7.32245pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 vi-nar elit pu-rus eget enim. Nunc
+ []
+
+
+Overfull \hbox (4.43361pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 vi-tae tor-tor. Proin tem-pus nibh
+ []
+
+
+Overfull \hbox (3.01688pt too wide) in paragraph at lines 104--105
+\OT1/cmr/m/n/10 sit amet nisl. Vi-va-mus quis tor-
+ []
+
+[7] [8]
+<images/portada.jpg, id=39, 481.8pt x 481.8pt>
+File: images/portada.jpg Graphic file (type jpg)
+<use images/portada.jpg>
+Package pdftex.def Info: images/portada.jpg  used on input line 177.
+(pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
+<./images/portada.jpg, id=40, 481.8pt x 481.8pt>
+File: ./images/portada.jpg Graphic file (type jpg)
+<use ./images/portada.jpg>
+Package pdftex.def Info: ./images/portada.jpg  used on input line 183.
+(pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
+ [9 <./images/portada.jpg>]
+d:/Diseño web/latex/main.tex:234: Undefined control sequence.
+l.234         \rowcolors
+                        {2}{red!50}{green!50}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10 <./images/portada.jpg>] [11] ("d:/Diseño web\latex\build\main.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+) ) 
+Here is how much of TeX's memory you used:
+ 5138 strings out of 480930
+ 81085 string characters out of 2899762
+ 618181 words of memory out of 3000000
+ 20941 multiletter control sequences out of 15000+200000
+ 538674 words of font info for 46 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,15n,38p,281b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Frank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on "d:/Diseño web\latex\build\main.pdf" (11 pages, 538565 bytes).
+PDF statistics:
+ 104 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

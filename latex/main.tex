@@ -1,0 +1,247 @@
+\documentclass{article}     % Tipo de documento
+\usepackage[utf8]{inputenc} % Paquete de codificación
+\usepackage[spanish]{babel} % Paquete de diccionario
+\usepackage{amsmath}        % Paquete para ecuaciones
+\usepackage{lipsum}         % Paquete para texto aleatorio
+\usepackage{multicol}       % Paquete para varias columnas
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{slashbox}
+\usepackage{colortbl}
+\usepackage{xcolor}[table]
+
+\input{colors.tex}
+\input{dicEcuaciones.tex}
+
+\newcommand{\cuadratica}{
+    \begin{equation}
+        x_{1,2} = \frac{1}{2a}\Bigl(-b\pm \sqrt{b^2 - 4ac}\Bigr)
+    \end{equation}
+}
+
+\renewcommand{\contentsname}{Tabla de contenido}
+\renewcommand{\listfigurename}{Lista de figuras}
+
+\graphicspath{{./images/}}
+
+\newtheorem{theorem}{Teorema}
+
+\title{Hola Mundo!}     % Título del documento
+\author{Frank Lazo}     % Autor del documento
+\date{\today}           % Fecha del documento
+
+\begin{document}        % Inicio del documento
+
+    \renewcommand{\figurename}{Fig.}
+    \renewcommand{\listtablename}{Tablas}
+
+    \maketitle          % Escribe el título, autor y fecha
+    
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    \begin{abstract}    % Ambiente para el resumen
+        \lipsum[1]
+    \end{abstract}
+    
+    \section*{Introducción}  % Inicia una sección del documento
+
+        Hola Mundo!         % Contenido del documento
+
+        \subsection{Título de la subsección}
+            \lipsum[7]
+    \section{Título de la sección}
+        \lipsum[1]
+        \subsection{Título de la subsección}
+            \lipsum[2-3]
+            \subsubsection{Título de la subsubsección}
+                \lipsum[4]
+                \paragraph{Título del párrafo} % Para títulos sin numeración
+                    \lipsum[5]
+    \section*{Título de la sección}
+        \lipsum[1]
+        \subsection*{Título de la subsección}
+            \lipsum[2-3]
+            \subsubsection*{Título de la subsubsección}
+                \lipsum[4]
+    \section{Título de la sección}
+        \lipsum[1]
+    
+    \twocolumn
+    \section{Título de la sección}
+        \lipsum[1-5]
+
+    \onecolumn
+    \section{Título de la sección}
+        \lipsum[1]
+    
+    %\renewcommand{\columnseprule}{.5pt}
+    \setlength\columnsep{7.5mm}
+    \begin{multicols}{3}
+        \lipsum[2-3]
+    \end{multicols}
+
+    \begin{paracol}{2}[\section{Título muy largo de sección}]
+        \lipsum[4]
+        \switchcolumn
+        Esta es la traducción del texto original.
+        \switchcolumn*
+        \lipsum[4]
+        \switchcolumn
+        \lipsum[3]
+    \end{paracol}
+
+    \section{Columnas de diferentes anchos}
+    \columnratio{.6}
+    \columncolor{red}
+    \begin{paracol}{2}
+        \lipsum[1]
+        \switchcolumn
+        \lipsum[4]
+        \textcolor{green}{\lipsum[4]}
+    \end{paracol}
+
+    \section{Expresiones Matemáticas}
+    El espacio se ajusta a la línea del texto: $\sum_{i = 1}^na_i$
+    El espacio se ajusta a la expresión: $\displaystyle{\sum_{i = 1}^na_i}$
+
+    La combinación de $n$ elementos de $r$ en $r$ se define:
+    \[
+    \binom{n}{r} = \frac{n!}{r!(n - r)}
+    \]
+
+    El número de permutaciones de $n$ en $r$ elementos es:
+    \begin{equation}
+    _nP_r = \frac{n!}{(n - r)!}
+    \end{equation}
+
+    Expresión con el ambiente equation sin numeración:
+    \begin{equation*}
+    p(x) = \frac{Q(x)}{P(x)},\; q(x) = \frac{R(x)}{P(x)}
+    \end{equation*}
+
+    \begin{equation*}
+    E = \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{\ddots}}}
+    \end{equation*}
+
+    \[
+        W(f_1, f_2) =
+        \begin{vmatrix}
+            x^2 & x|x| \\
+            2x & \dfrac{2x^2}{|x|}
+        \end{vmatrix}
+    \]
+
+    \[
+        \left[
+        \begin{array}{lcr}
+            -0.1 & a & 0.1 \\
+            -0.01 & a + 1 & 0.01
+        \end{array}
+        \right]
+    \]
+
+    \[
+        \begin{split}
+            L[c_1y_1 + c_2y_2] &= c_2L[y_1'' + py_1']\cdots \\
+            &= c_2L[y_1] + c_2L[y_2]
+        \end{split}
+    \]
+
+    \begin{gather}
+        W' + p(x)W = 0 \\
+        W(x) = Ce^{-\int p(x)dx} \notag \\
+        E = mc^2
+    \end{gather}
+
+    \begin{theorem}
+        Este es un teorema.
+    \end{theorem}
+
+    \textcolor{Verde}{Texto en color verde.}
+
+    \cuadratica
+
+    \Fourier[inLine]
+
+    \LaTeX
+
+    \section{Elementos flotantes}
+
+    Elementos flotantes:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale = .4]{images/portada.jpg}
+        \caption{Leyenda de imagen}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale = .3]{portada}
+        \caption{Leyenda de imagen}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \begin{tabular}{|c|c|}
+            \hline
+            celda 11 & celda 12 \\
+            \hline
+            celda 21 & celda 22 \\
+            \hline
+        \end{tabular}
+        \caption{Leyenda de tabla}
+    \end{figure}
+
+    \renewcommand{\tabcolsep}{20pt}
+    \renewcommand{\arraystretch}{2}
+    \renewcommand{\arrayrulewidth}{1pt}
+    
+    \lipsum[1]
+    
+    \begin{wraptable}{L}{0.8\textwidth}
+        \begin{tabular}{|l|c|}
+            \hline
+            \backslashbox{celda 11a}{celda 11b} & celda 12 \\
+            \hline
+            celda 21 & celda 22 \\
+            \hline
+        \end{tabular}
+        \caption{Leyenda de tabla}
+    \end{wraptable}
+    
+    \lipsum[1]
+
+    \renewcommand{\arrayrulewidth}{1pt}
+    \begin{table}{ht}
+        \begin{tabular}{|>{\columncolor{red!50}}ccc|}
+            \hline
+            \rowcolor{blue!50}
+            celda 11 & celda 12 & celda 13 \\
+            \hline
+            celda 21 & celda 22 & celda 23 \\
+            celda 31 & celda 32 & celda 33 \\
+            celda 41 & celda 42 & celda 43 \\
+            \hline
+        \end{tabular}
+        \caption{Leyenda de tabla}
+    \end{table}
+
+    \begin{table}{ht}
+        \centering
+        \rowcolors{2}{red!50}{green!50}
+        \begin{tabular}{|>{\columncolor{red!50}}ccc|}
+            \hline
+            celda 11 & celda 12 & celda 13 \\
+            \hline
+            celda 21 & celda 22 & celda 23 \\
+            celda 31 & celda 32 & celda 33 \\
+            celda 41 & celda 42 & celda 43 \\
+            \hline
+        \end{tabular}
+        \caption{Leyenda de tabla}
+    \end{table}
+
+\end{document}          % Fin del documento

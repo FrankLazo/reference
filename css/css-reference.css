@@ -1,0 +1,273 @@
+/***************************************************************************************************
+                                    CSS: Cascading Style Sheets
+                                    ===========================
+
+> Thinking inside the box.
+> Selector {
+        declaration;
+    }
+> Declaration: property: value;
+
+> En el documento HTML:
+    - External CSS:     <link rel="stylesheet" href="css/css-reference.css" type="text/css">
+    - Internal CSS:     <style type="text/css"> code... </style>
+> En HTML4: <style> se usaba en cada elemento.
+> Para sitios con más de una página: external CSS.
+> Varios ficheros CSS: fuente y colores - layout - ...
+
+> CSS Selectors:
+    - Universal:        *
+    - Type:             tag
+    - Class:            .className
+    - Id:               #id_Value
+    - Child:            tag > tag
+    - Descendant:       tag tag
+    - Adjacent sibling: tag + tag
+    - General sibling:  tag ~ tag
+
+> Pseudo-elements:
+    - selector:first-letter
+    - selector:first-line   (La primera línea visible)
+
+> Pseudo-classes:
+    - selector:link
+    - selector:visited
+    - selector:hover        (No touch screens)
+    - selector:active 
+    - selector:focus        (Cuando se está interactuando con el texto de un form)
+
+> Attribute selectors:
+    - Existence     p[class]
+    - Equality      p[class="dog"]
+    - Space         p[class~="dog"] (Para una lista de valores)
+    - Prefix        p[class^"dog"]  (Valor inicia con dog)
+    - Substring     p[class*"dog"]  (Valor contiene dog)
+    - Suffix        p[class$"dog"]  (Valor finaliza en dog)
+
+> How CSS rules cascade:
+    1. Última regla para dos o más iguales.
+    2. Más específico que los generales.
+    3. !important;
+
+> Inheritance: inherit;
+
+> Probar en varios navegadores, en otros sistemas operativos y versiones.
+    (Hay páginas que permiten hacerlo)
+> Si una propiedad CSS no se visualiza como se espera: browser quirk ó CSS bug.
+
+***************************************************************************************************/
+
+/* Comments */
+
+/* Diferentes formatos en los navegadores: .eot .woff .ttf/.otf .svg
+ * FOUC, FOUT: 
+    - Delete glyphs from the font or
+    - Host on a Content Delivery Network.
+ */
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/open-sans/OpenSans-Regular.ttf) format('truetype'),
+         url(../fonts/open-sans/OpenSans-Regular.woff) format('woff');
+}
+
+#color {
+    /* color: rgb(100,100,90) #ee3e80 DarkCyan (Hay 147 colores)
+     */
+    color: white;
+
+    /* Si no se especifica es transparente.
+     * Fondo de la mayoría de navegadores: Blanco.
+     */
+    background-color: #333;
+
+    /* Hue + Saturation + Brightness
+     * Contraste:   
+        - Evitar poco contraste.
+        - Recomendable alto contraste.
+        - Contraste medio para gran cantidad de texto.
+        - Sobre fondo oscuro: aumentar interlineado y ancho de letra para mejorar la lectura.
+     */
+     
+    /* (CSS3)
+     * opacity: 0.0 - 1.0 (Heredable)
+     * ... rgba(0,0,0,0) (No heredable)
+     * Crear un color de respaldo por si no se muestra la opacidad.
+     */
+    opacity: 0.5;
+
+    /* Hue, Saturation, Lightness:
+        - hsl(0, 0%, 50%):      0-360º, 0-100%, 0-100% (50% normal)
+        - hsla(0, 0%, 0%, 1):   0-1.0 alpha
+     */
+}
+
+#texto {
+    background-color: seagreen;
+
+    /* Typeface:
+        - Serif:        Print, easier to read.
+        - Sans-serif:   Texto pequeño en pantalla.
+        - Monospace:    Código.
+
+        - Ascender:     Above the cap height.
+        - Cap height:   Top of flat letters.
+        - X-Height:     Height of the letter x.
+        - Baseline:     Line the letters sit on.
+        - Descender:    Below the baseline.
+
+        - Weight:   Light, medium, bold, black. (Énfasis y contraste)
+        - Style:    Normal, italic, oblique.
+        - Stretch:  Condensed (Narrow), Regular, Extended.
+
+     * La fuentes del navegador son las instaladas en la PC:
+        - Serif:        Georgia, Times, Times New Roman.
+        - Sans-serif:   Arial, Verdana, Helvetica.
+        - Monospace:    Courier, Courier New.
+        - Cursive:      Comic Sans MS, Monotype Corsiva.
+        - Fantasy:      Impact, Haettenschweiler. (No para textos largos, títulos mejor)
+
+     * PC != MAC fonts.
+     * Font-family - Font-face - Service-based font-face - Images - sIFR - Cufon
+     */
+
+    /* font-family: "...", ..., generic;
+     * No usar más de tres fuentes en una página.
+     */
+    font-family: 'Open Sans', 'Century Gothic', sans-serif;
+
+    /* font-size: 16px (default, body text), 100% (=16px), 1.0em;
+     * 1 pt = 1/72 inch + Resolution 72 dpi -> 1pt <> 1px
+     * Usar pt para versiones imprimibles.
+     * Mejor opción px.
+     * h1: 32px, h2: 24px, h3: 18px
+     */
+    font-size: 24px;
+
+    /* font-weight: normal/bold; */
+    font-weight: bold;
+
+    /* font-style: normal/italic/oblique;
+     * Si no encuentra italic, se verá oblique.
+     */
+    font-style: italic;
+
+    /* text-transform: uppercase/lowercase/capitalize;
+     * uppercase: Revisar el espaciado para mejorar la legibilidad.
+     */
+    text-transform: uppercase;
+
+    /* text-decoration: none/underline/overline/line-through/blink;
+     * blink: Flash (No recomendable).
+     */
+    text-decoration: underline;
+
+    /* Text-size:   Distancia entre el descender y el ascender de la misma línea.
+     * Leading:     Distancia entre el descender y el ascender de la siguiente línea.
+     * Line height: La suma de text-size y leading.
+     * Aumentar para hacer un texto más fácil de leer.
+     * Leading mayor al espacio entre palabras: 1.4-1.5 em
+     */
+    line-height: 48px;
+
+    /* Kerning. No en normal case. em (Recomendable) */
+    letter-spacing: .5em;
+
+    /* Default ~0.25em. Cambiar en caso se cambie el kerning también. */
+    word-spacing: 1em;
+
+    /* text-align: left/right/center/justify;
+     * Para varios párrafos mejor: left.
+     */
+    text-align: center;
+
+    /* text-indent: px, em;
+     * Sangría a la primera línea. (+/-)
+     * Ocultar partes del HTML.
+     */
+    text-indent: -12em;
+
+    /* (CCS3)
+     * text-shadow: distancia derecha/izquierda, distancia arriba/abajo,
+        (opcional)difuminado, color;
+     */
+    text-shadow: 2px 2px 4px orangered;
+}
+
+#texto > img {
+    width: 100px;
+
+    /* vertical-align: baseline/sub/super/top/text-top/middle/bottom/text-bottom;
+     * Length or percentage of the line height (px, em, %).
+     * Se usa con inline elements: <img> , <em> , <strong> , etc
+     */
+    vertical-align: middle;
+}
+
+#box {
+    background-color: cornflowerblue;
+
+    /* Por defecto tamaño justo para su contenido.
+     * Pixels, porcentajes (Respecto a su contenedor), em (Respecto al texto en él).
+     */
+    width: 50%;
+    height: 2em;
+    min-width: 360px;
+    max-width: 1024px;
+    min-height: unset;
+    max-height: unset;
+
+    /* overflow: hidden/scroll;
+     * Cuando el contenido sobrepasa a su contenedor.
+     */
+    overflow: hidden;
+
+    /*
+     * ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  ▒▒▒▒ (White space) Margin.
+     * ▒▒▒▒┌─────────────┐▒▒▒▒  
+     * ▒▒▒▒│░░░░░░░░░░░░░│▒▒▒▒  ░░░░ (White space) Padding.
+     * ▒▒▒▒│░░░░ BOX ░░░░│▒▒▒▒  ┌──┐
+     * ▒▒▒▒│░░░░░░░░░░░░░│▒▒▒▒  │  │ Border.
+     * ▒▒▒▒└─────────────┘▒▒▒▒  └──┘
+     * ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  BOX  Width.
+     *
+     * Si los margin se solapan, sólo se muestra el más ancho.
+     */
+
+    /* border-width: px/thin/medium/thick; or
+                     top-bottom left-right; or
+                     top right bottom left;
+     * border-top-width, border-right-width, border-bottom-width, border-left-width.
+     *
+     * border-style: solid/dotted/dashed/double/groove/ridge/inset/outset/(hidden/none); or
+                     top-bottom left-right; or
+                     top right bottom left;
+     * border-top-style, border-right-style, border-bottom-style, border-left-style.
+     *
+     * border-color: ...; or
+                     top-bottom left-right; or
+                     top right bottom left;
+     * border-top-color, border-right-color, border-bottom-color, border-left-color.
+     *
+     * border: width style color;
+     * border-top, border-right, border-bottom, border-left.
+     */
+    border: 2px solid goldenrod;
+
+    /* padding: ...; or
+                top-bottom left-right; or
+                top right bottom left;
+     * padding-top, padding-right, padding-bottom, padding-left.
+     * No inherit.
+     */
+    padding: 2em;
+
+    /* margin: ...; or
+                top-bottom left-right; or
+                top right bottom left;
+     * margin-top, margin-right, margin-bottom, margin-left.
+     * No inherit.
+     *
+     * Centering content: margin-right: auto; margin-left: auto;
+     */
+    margin: 5em;
+}

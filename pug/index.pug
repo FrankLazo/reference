@@ -1,0 +1,67 @@
+// Comentarios
+- let name = 'Pug'
+- var days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+- 
+	var pages = [
+		{
+			title: 'Home',
+			url: 'home.html',
+			child: []
+		},
+		{
+			title: 'Services',
+			url: 'services.html',
+			child: [
+				{
+					title: 'Web design',
+					url: 'design.html',
+					child: []
+				},
+				{
+					title: 'Seo',
+					url: 'seo.html',
+					child: []
+				}
+			]
+		},
+		{
+			title: 'Contact us',
+			url: 'contact.html',
+			child: []
+		}
+	]
+|
+|
+doctype
+head
+	meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+	title Mi primer Pug
+	style.
+		body {
+			background-color: red;
+		}
+body
+	header
+		.logo Logo
+		.main-heading
+			h1= `Hola ${name}!`
+		nav: ul  
+			each page in pages
+				li
+					a(href= page.url)= page.title
+					if page.child.length > 0
+						ul
+							each subpage in page.child
+								li: a(href= subpage.url)= subpage.title					
+	main: p
+		|Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		|Vel consectetur hic quidem esse eligendi est inventore amet!
+		|Deleniti, #[strong doloribus hic]!
+		table
+			tr: each day in days
+				td= day
+			tr: each day in days
+				td= `${day.toUpperCase()}`
+	script.
+		alert('Hola Mundo!');
+		alert('Hola Pug!');
